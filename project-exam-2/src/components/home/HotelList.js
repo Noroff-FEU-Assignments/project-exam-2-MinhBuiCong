@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from "react";
 import Search from "../search/Search";
 import HotelCard from "../hotelCard/HotelCard";
-// import "../../sass/style.scss";
+import "../../sass/style.scss";
 import axios from "axios";
 
 function HotelList() {

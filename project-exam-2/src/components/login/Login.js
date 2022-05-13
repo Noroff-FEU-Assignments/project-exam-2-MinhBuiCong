@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import axios from "axios";
-import "../../sass/style.scss";
+// import "../../sass/style.scss";
 import { Navigate } from "react-router-dom";
 
 function Login() {
