@@ -1,14 +1,14 @@
 import React from "react";
-import "sass/style.scss";
+// import "./sass/style.scss";
 import {
   BrowserRouter as Router,
   Routes,
   Route,
   NavLink,
 } from "react-router-dom";
-import DrinkDetail from "./components/drinks/DrinkDetail";
+import DrinkDetail from "./components/home/DrinkDetail";
 import Contact from "./components/contact/Contact";
-import DrinkList from "./components/drinks/DrinkList";
+import HotelList from "./components/home/HotelList";
 import Login from "./components/login/Login";
 import NavBar from "react-bootstrap/Navbar";
 import Nav from "react-bootstrap/Nav";
@@ -19,9 +19,9 @@ function App() {
   return (
     <Router>
       <div>
-        <NavBar className="navbar" expand="lg">
+        <NavBar className="navbar" expand={false}>
           <Container className="container">
-            <NavBar.Brand href="/">JS Frameworks</NavBar.Brand>
+            <NavBar.Brand href="/">Holidaze</NavBar.Brand>
             <NavBar.Toggle aria-controls="basic-navbar-nav" />
             <NavBar.Collapse id="basic-navbar-nav">
               <Nav className="me-auto">
@@ -39,7 +39,7 @@ function App() {
           </Container>
         </NavBar>
         <Routes>
-          <Route exact path="/" element={<DrinkList />} />
+          <Route exact path="/" element={<HotelList />} />
           <Route path="/detail/:id" element={<DrinkDetail />} />
           <Route path="/login" element={<Login />} />
           <Route path="/admin" element={<Admin />} />

@@ -2,8 +2,7 @@ import React from "react";
 import { Link } from "react-router-dom";
 import PropTypes from "prop-types";
 
-function Drink({ drink }) {
-  console.log("drink", drink);
+function Home({ drink }) {
   const { idDrink, strDrink } = drink;
 
   return (
@@ -15,10 +14,10 @@ function Drink({ drink }) {
   );
 }
 
-Drink.propTypes = {
+Home.propTypes = {
   drink: PropTypes.shape({
     idDrink: PropTypes.string,
     strDrink: PropTypes.string,
   }),
 };
-export default Drink;
+export default Home;

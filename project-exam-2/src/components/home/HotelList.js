@@ -1,9 +1,10 @@
 import React, { useState, useEffect } from "react";
-import Drink from "./Drink";
-import "../../App.scss";
+import Search from "../search/Search";
+import HotelCard from "../hotelCard/HotelCard";
+// import "../../sass/style.scss";
 import axios from "axios";
 
-function DrinkList() {
+function HotelList() {
   const [drinks, setDrinks] = useState([]);
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState("");
@@ -33,12 +34,11 @@ function DrinkList() {
   }
 
   return (
-    <main className="drinks">
-      <h1>Drinks</h1>
-      {drinks.map(function (drink) {
-        return <Drink key={drink.idDrink} drink={drink} />;
-      })}
-    </main>
+    <>
+      <Search />
+      <h1>Hello</h1>
+      <HotelCard />
+    </>
   );
 }
-export default DrinkList;
+export default HotelList;
