@@ -1,0 +1,41 @@
+form {
+  margin: 0 auto;
+  padding: 1rem;
+  max-width: 900px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  .span {
+    text-align: left;
+    margin: 1rem 0;
+  }
+  input {
+    width: 300px;
+  }
+  select {
+    width: 300px;
+    padding: 0.5rem;
+  }
+  textarea {
+    width: 300px;
+    padding-left: 0.5rem;
+  }
+  .errors {
+    color: red;
+    margin: 0.5rem 0;
+  }
+  button {
+    width: 200px;
+    border: none;
+    background-color: orange;
+    margin-top: 1rem;
+  }
+  .buttonLogin {
+    width: 200px;
+    border: none;
+    background-color: orange;
+    margin-top: 1rem;
+  }
+}

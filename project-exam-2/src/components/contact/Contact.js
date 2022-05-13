@@ -1,88 +1,63 @@
 import React from "react";
-// import "../../sass/style.scss";
 import { useForm } from "react-hook-form";
-import * as yup from "yup";
-import { yupResolver } from "@hookform/resolvers/yup";
+import { BASE_URL, headers } from "../../constants/api";
+import ConfirmationModal from "../modal/ConfirmationModal";
+import useConfirmationModal from "../../hooks/useConfirmationModal";
+import Footer from "../home/components/Footer";
 
-const schema = yup.object().shape({
-  firstName: yup
-    .string()
-    .required("Please enter your first name")
-    .min(3, "First name must be at least 3 characters"),
-  lastName: yup
-    .string()
-    .required("Please enter your last name")
-    .min(4, "Last name must be at least 4 characters"),
-  email: yup
-    .string()
-    .required("Email is required")
-    .email("Must be a valid email"),
-  subject: yup.string().required(),
-  message: yup
-    .string()
-    .required("Please enter your message")
-    .min(10, "Message must be at least 10 characters"),
-});
+function ContactPage() {
+  const { register: contact, handleSubmit } = useForm();
+  const [open, openModal, onClose] = useConfirmationModal();
+  async function onSubmit(data) {
+    console.log("data", data);
+    const url = BASE_URL + "contacts";
+    const options = { headers, method: "POST", body: JSON.stringify(data) };
 
-function Contact() {
-  const {
-    register,
-    handleSubmit,
-    formState: { errors },
-  } = useForm({
-    resolver: yupResolver(schema),
-  });
-
-  function onSubmit(data) {
-    console.log(data);
-    window.location.replace("/");
+    await fetch(url, options);
+    openModal();
   }
 
-  console.log(errors);
-
   return (
-    <main>
-      <form onSubmit={handleSubmit(onSubmit)}>
-        <h1>Contact form</h1>
-        <span className="first-name span">First Name</span>
-        <input {...register("firstName")} type="text" placeholder="John" />
-        {errors.firstName && (
-          <span className="errors">{errors.firstName.message}</span>
-        )}
-        <span className="last-name span">Last name</span>
-        <input {...register("lastName")} type="text" placeholder="Doe" />
-        {errors.lastName && (
-          <span className="errors">{errors.lastName.message}</span>
-        )}
-
-        <span className="email span">E-mail</span>
-        <input {...register("email")} type="email" placeholder="John@doe.com" />
-        {errors.email && <span className="errors">{errors.email.message}</span>}
-
-        <span className="subject span">Subject</span>
-        <select {...register("subject")}>
-          <option value="1">Help</option>
-          <option value="2">Other</option>
-        </select>
-        {errors.subject && (
-          <span className="errors">{errors.subject.message}</span>
-        )}
-
-        <span className="message span">Message</span>
-        <textarea
-          {...register("message")}
-          placeholder="Write your message here"
-          rows="4"
-          cols="50"
-        ></textarea>
-        {errors.message && (
-          <span className="errors">{errors.message.message}</span>
-        )}
-
-        <button>Send</button>
-      </form>
-    </main>
+    <>
+      <ConfirmationModal
+        open={open}
+        onClose={onClose}
+        message={"Your Query has been recorded successfully"}
+      />
+      <div className="p-4 text-green-800 mb-12">
+        <h4 className="font-bold mb-2 text-lg">Contact Us</h4>
+        <form onSubmit={handleSubmit(onSubmit)}>
+          <label className="mb-2">Name</label>
+          <input
+            className="rounded-lg px-2 py-3 w-full my-2 outline-none text-black shadow-lg"
+            name="name"
+            type="text"
+            ref={contact()}
+            required
+          ></input>
+          <label className="mb-2">Email</label>
+          <input
+            className="rounded-lg px-2 py-3 w-full my-2 outline-none text-black shadow-lg"
+            name="email"
+            type="email"
+            ref={contact()}
+            required
+          ></input>
+          <label className="mb-2">Message</label>
+          <textarea
+            className="rounded-lg px-2 py-3 w-full my-2 outline-none text-black h-32 shadow-lg"
+            name="message"
+            ref={contact()}
+            required
+          ></textarea>
+          <button className="bg-red-700 shadow-md px-2 py-3 text-white rounded-lg w-full uppercase">
+            Send Message
+          </button>
+        </form>
+      </div>
+      <Footer />
+    </>
   );
 }
 
-export default Contact;
+export default ContactPage;
