@@ -19,32 +19,26 @@ import Enquiries from "./components/admin/Enquiries";
 
 function App() {
   return (
-    <div className="bg-gray-200">
-      <AuthContextProvider>
-        <Router>
-          <Navbar />
-          <Routes>
-            <Route exact path="/" element={<Home />} />
-            <Route path="/login" element={<Login />} />
-            <Route path="/register" element={<Register />} />
-            <Route path="/hotels/:id" element={<EstablishmentDetail />} />
-            <Route exact path="/hotels" element={<Establishment />} />
-            <Route path="/contact" element={<Contact />} />
-            <Route exact path="/admin" element={<Dashboard />} />
-            <Route exact path="/admin/messages" element={<Messages />} />
-            <Route exact path="/admin/enquiries" element={<Enquiries />} />
-            <Route exact path="/admin/hotels" element={<Hotels />} />
-            <Route exact path="/admin/hotels/add" element={<AddHotel />} />
-            <Route
-              exact
-              path="/admin/hotels/edit/:id"
-              element={<EditHotel />}
-            />
-            <Route to="/" />
-          </Routes>
-        </Router>
-      </AuthContextProvider>
-    </div>
+    <AuthContextProvider>
+      <Router>
+        <Navbar />
+        <Routes>
+          <Route exact path="/" element={<Home />} />
+          <Route path="/login" element={<Login />} />
+          <Route path="/register" element={<Register />} />
+          <Route path="/hotels/:id" element={<EstablishmentDetail />} />
+          <Route exact path="/hotels" element={<Establishment />} />
+          <Route path="/contact" element={<Contact />} />
+          <Route exact path="/admin" element={<Dashboard />} />
+          <Route exact path="/admin/messages" element={<Messages />} />
+          <Route exact path="/admin/enquiries" element={<Enquiries />} />
+          <Route exact path="/admin/hotels" element={<Hotels />} />
+          <Route exact path="/admin/hotels/add" element={<AddHotel />} />
+          <Route exact path="/admin/hotels/edit/:id" element={<EditHotel />} />
+          <Route to="/" />
+        </Routes>
+      </Router>
+    </AuthContextProvider>
   );
 }
 

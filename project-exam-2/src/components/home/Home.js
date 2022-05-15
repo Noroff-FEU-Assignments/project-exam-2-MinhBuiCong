@@ -1,22 +1,26 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
 
 // import components
 import Search from "../search/Search";
 import HotelCard from "../card/HotelCard";
 import Footer from "./components/Footer";
-import { url } from "../../constants/api";
+import { getHotels } from "../../constants/api";
 
-// const FEATURED_PLACE_INDEX = 1;
+const Home = () => {
+  const [hotels, setHotels] = useState("");
+  useEffect(() => {
+    getHotels(setHotels);
+  }, []);
+  console.log(hotels.data);
 
-function Home() {
-  console.log(url);
   return (
-    <main>
+    <main className="home-container">
+      <h1 classname="title">Book your hotel</h1>
       <Search />
       <HotelCard />
       <Footer />
     </main>
   );
-}
+};
 
 export default Home;
