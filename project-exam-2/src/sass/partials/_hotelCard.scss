@@ -1,7 +1,7 @@
 .card {
   display: flex;
   flex-direction: row;
-  height: 250px;
+  height: fit-content;
   width: 700px;
   border: none;
   transition: 0.3s;
@@ -27,6 +27,7 @@
       border-radius: $border-radius;
       padding: 0.5rem;
       font-size: 16px;
+      min-height: 100px;
       color: $text-color;
     }
     .card-button {
@@ -44,4 +45,22 @@
 
 .card:hover {
   box-shadow: $box-shadow;
+}
+
+@media screen and (max-width: 768px) {
+  .card {
+    flex-direction: column;
+    width: 500px;
+
+    .card-image {
+      width: 100%;
+      height: 200px;
+      background-color: $primary-color;
+    }
+  }
+}
+@media screen and (max-width: 540px) {
+  .card {
+    max-width: 300px;
+  }
 }
