@@ -3,25 +3,28 @@ import { Link } from "react-router-dom";
 
 function Footer() {
   return (
-    <div>
-      <div>
-        <Link to="/">
+    <main className="footer-container">
+      <div className="footer-info-container">
+        <Link className="footer-links" to="/">
           <h4>Home</h4>
         </Link>
-        <Link to="/contact">
+        <Link className="footer-links" to="/contact">
           <h4>Contact</h4>
         </Link>
-        <Link to="/login">
-          <h4>Login</h4>
-        </Link>
-        <div id="social">
+        <Link className="footer-links" to="/login">
+          <h4>Social Media</h4>
           <i className="fa fa-facebook"></i>
           <i className="fa fa-instagram"></i>
           <i className="fa fa-snapchat"></i>
-        </div>
-        <p>Copyright 2020</p>
+        </Link>
+        <Link className="footer-links" to="/newsletter">
+          <h4>Newsletter</h4>
+        </Link>
       </div>
-    </div>
+      <div className="copyright-container">
+        <p>Copyright 2022</p>
+      </div>
+    </main>
   );
 }
 
