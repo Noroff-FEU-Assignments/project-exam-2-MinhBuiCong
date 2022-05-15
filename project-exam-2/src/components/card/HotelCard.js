@@ -5,15 +5,15 @@ import Button from "react-bootstrap/Button";
 function HotelCard() {
   return (
     <main className="card-container">
-      <Card style={{ width: "20rem" }}>
-        <Card.Img variant="top" src="holder.js/100px180" />
-        <Card.Body>
-          <Card.Title>Card Title</Card.Title>
-          <Card.Text>
+      <Card className="card" style={{ width: "20rem" }}>
+        <Card.Img className="card-image" src="holder.js/100px180" />
+        <Card.Body className="card-text-container">
+          <Card.Title className="card-title">Card Title</Card.Title>
+          <Card.Text className="card-description">
             Some quick example text to build on the card title and make up the
             bulk of the card's content.
           </Card.Text>
-          <Button variant="primary">Go somewhere</Button>
+          <Button className="card-button">Go somewhere</Button>
         </Card.Body>
       </Card>
     </main>

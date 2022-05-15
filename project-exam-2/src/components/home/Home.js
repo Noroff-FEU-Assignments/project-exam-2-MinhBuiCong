@@ -14,12 +14,14 @@ const Home = () => {
   console.log(hotels.data);
 
   return (
-    <main className="home-container">
-      <h1 classname="title">Book your hotel</h1>
-      <Search />
-      <HotelCard />
+    <>
+      <main className="home-container">
+        <h1 classname="title">Book your hotel</h1>
+        <Search />
+        <HotelCard />
+      </main>
       <Footer />
-    </main>
+    </>
   );
 };
 
