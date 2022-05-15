@@ -1,0 +1,47 @@
+.card {
+  display: flex;
+  flex-direction: row;
+  height: 250px;
+  width: 700px;
+  border: none;
+  transition: 0.3s;
+  border-radius: $border-radius;
+
+  .card-image {
+    width: 250px;
+    height: 100%;
+    background-color: $primary-color;
+  }
+
+  .card-text-container {
+    .card-title {
+      font-weight: bold;
+      font-size: 24px;
+    }
+    .card-subtitle {
+      margin-bottom: 1rem;
+      font-size: 18px;
+    }
+    .card-description {
+      background-color: $text-description-color;
+      border-radius: $border-radius;
+      padding: 0.5rem;
+      font-size: 16px;
+      color: $text-color;
+    }
+    .card-button {
+      background-color: $cta-color;
+      border-radius: $border-radius;
+      border: none;
+      font-size: 16px;
+      transition: 0.3s;
+    }
+    .card-button:hover {
+      opacity: 0.8;
+    }
+  }
+}
+
+.card:hover {
+  box-shadow: $box-shadow;
+}
