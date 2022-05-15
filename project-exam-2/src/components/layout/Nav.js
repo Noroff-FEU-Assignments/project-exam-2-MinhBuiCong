@@ -1,8 +1,7 @@
 import React, { useContext, useState } from "react";
-import { Link, useNavigate } from "react-router-dom";
+import { Link, useNavigate, NavLink } from "react-router-dom";
 import { AuthContext } from "../../context/AuthContext";
 import NavBar from "react-bootstrap/Navbar";
-import NavLink from "react-bootstrap/NavLink";
 import Nav from "react-bootstrap/Nav";
 import Container from "react-bootstrap/Container";
 
@@ -81,10 +80,13 @@ function Navbar() {
           <NavBar.Collapse id="basic-navbar-nav">
             <Nav className="me-auto">
               <NavLink className="link" to="/">
-                Drinks
+                Home
               </NavLink>
-              <NavLink className="link" to="/login">
-                Login
+              <NavLink className="link" to="/hotels">
+                Hotels
+              </NavLink>
+              <NavLink className="link" to="/admin">
+                Admin
               </NavLink>
               <NavLink className="link" to="/contact">
                 Contact

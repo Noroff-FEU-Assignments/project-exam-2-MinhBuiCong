@@ -1,5 +1,5 @@
 // import React from "react";
-// import "./sass/style.scss";
+import "./sass/style.scss";
 // import {
 //   BrowserRouter as Router,
 //   Routes,
@@ -62,12 +62,10 @@ import Hotels from "./components/admin/Hotels";
 import AddHotel from "./components/admin/AddHotel";
 import EditHotel from "./components/admin/EditHotel";
 import Dashboard from "./components/admin/Dashboard";
-import Navbar from "./components/layout/Navbar";
-
+import Navbar from "./components/layout/Nav";
 import Establishment from "./components/establishment/Establishment";
 import EstablishmentDetail from "./components/establishment/EstablishmentDetail";
 import Contact from "./components/contact/Contact";
-
 import Messages from "./components/admin/Messages";
 import Enquiries from "./components/admin/Enquiries";
 
@@ -78,18 +76,22 @@ function App() {
         <Router>
           <Navbar />
           <Routes>
-            <Route path="/" exact component={Home} />
-            <Route path="/login" component={Login} />
-            <Route path="/register" component={Register} />
-            <Route path="/hotels/:id" component={EstablishmentDetail} />
-            <Route path="/hotels" exact component={Establishment} />
-            <Route path="/contact" component={Contact} />
-            <Route path="/admin" exact component={Dashboard} />
-            <Route path="/admin/messages" exact component={Messages} />
-            <Route path="/admin/enquiries" exact component={Enquiries} />
-            <Route path="/admin/hotels" exact component={Hotels} />
-            <Route path="/admin/hotels/add" exact component={AddHotel} />
-            <Route path="/admin/hotels/edit/:id" exact component={EditHotel} />
+            <Route exact path="/" element={<Home />} />
+            <Route path="/login" element={<Login />} />
+            <Route path="/register" element={<Register />} />
+            <Route path="/hotels/:id" element={<EstablishmentDetail />} />
+            <Route exact path="/hotels" element={<Establishment />} />
+            <Route path="/contact" element={<Contact />} />
+            <Route exact path="/admin" element={<Dashboard />} />
+            <Route exact path="/admin/messages" element={<Messages />} />
+            <Route exact path="/admin/enquiries" element={<Enquiries />} />
+            <Route exact path="/admin/hotels" element={<Hotels />} />
+            <Route exact path="/admin/hotels/add" element={<AddHotel />} />
+            <Route
+              exact
+              path="/admin/hotels/edit/:id"
+              element={<EditHotel />}
+            />
             <Route to="/" />
           </Routes>
         </Router>
