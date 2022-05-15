@@ -6,6 +6,8 @@
   border: none;
   transition: 0.3s;
   border-radius: $border-radius;
+  font-family: $font-heading;
+  margin: 0 auto;
 
   .card-image {
     width: 250px;
@@ -29,6 +31,7 @@
       font-size: 16px;
       min-height: 100px;
       color: $text-color;
+      font-family: $font-text;
     }
     .card-button {
       background-color: $cta-color;

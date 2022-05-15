@@ -2,6 +2,8 @@
   width: 700px;
   border: none;
   display: flex;
+  font-family: $font-heading;
+  margin: 2rem auto 4rem auto;
 
   .input {
     border-radius: 5px 0px 0px 5px;
@@ -34,5 +36,9 @@
 @media screen and (max-width: 540px) {
   .search-container {
     max-width: 300px;
+
+    .input::placeholder {
+      font-size: 16px;
+    }
   }
 }

@@ -3,7 +3,6 @@ import React, { useState, useEffect } from "react";
 // import components
 import Search from "../search/Search";
 import HotelCard from "../card/HotelCard";
-import Footer from "./components/Footer";
 import { getHotels } from "../../constants/api";
 
 const Home = () => {
@@ -14,14 +13,11 @@ const Home = () => {
   console.log(hotels.data);
 
   return (
-    <>
-      <main className="home-container">
-        <h1 classname="title">Book your hotel</h1>
-        <Search />
-        <HotelCard />
-      </main>
-      <Footer />
-    </>
+    <main className="home-container">
+      <h1 classname="title">Book your hotel</h1>
+      <Search />
+      <HotelCard />
+    </main>
   );
 };
 

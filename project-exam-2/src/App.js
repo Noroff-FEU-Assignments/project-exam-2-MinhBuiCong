@@ -16,6 +16,7 @@ import EstablishmentDetail from "./components/establishment/EstablishmentDetail"
 import Contact from "./components/contact/Contact";
 import Messages from "./components/admin/Messages";
 import Enquiries from "./components/admin/Enquiries";
+import Footer from "./components/home/components/Footer";
 
 function App() {
   return (
@@ -37,6 +38,7 @@ function App() {
           <Route exact path="/admin/hotels/edit/:id" element={<EditHotel />} />
           <Route to="/" />
         </Routes>
+        <Footer />
       </Router>
     </AuthContextProvider>
   );

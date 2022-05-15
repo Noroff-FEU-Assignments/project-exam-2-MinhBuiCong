@@ -22,7 +22,7 @@ function Footer() {
         </Link>
       </div>
       <div className="copyright-container">
-        <p>Copyright 2022</p>
+        <p>2022 Minh Cong Bui Home Studio. All Rights Reserved.</p>
       </div>
     </main>
   );
