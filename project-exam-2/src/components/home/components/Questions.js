@@ -30,38 +30,19 @@ function Questions() {
         open={open}
         onClose={onClose}
       />
-      <div className="bg-gray-900 w-full flex flex-col p-4 text-white">
-        <div className="flex justify-center mb-16">
-          <img className="w-32" src="/logo-white.svg" alt="white logo" />
+      <div>
+        <div>
+          <img src="/logo-white.svg" alt="white logo" />
         </div>
-        <h4 className="font-bold mb-2">Questions?</h4>
+        <h4>Questions?</h4>
         <form onSubmit={handleSubmit(onSubmit)}>
           <label className="mb-2">Name</label>
-          <input
-            className="rounded-lg px-2 py-3 w-full my-2 outline-none text-black"
-            name="name"
-            type="text"
-            ref={register}
-            required
-          ></input>
+          <input name="name" type="text" ref={register} required></input>
           <label className="mb-2">Email</label>
-          <input
-            className="rounded-lg px-2 py-3 w-full my-2 outline-none text-black"
-            name="email"
-            type="email"
-            ref={register}
-            required
-          ></input>
-          <label className="mb-2">Message</label>
-          <textarea
-            className="rounded-lg px-2 py-3 w-full my-2 outline-none text-black h-32"
-            name="message"
-            ref={register}
-            required
-          ></textarea>
-          <button className="bg-red-700 shadow-md px-2 py-3 text-white rounded-lg w-full">
-            Send Message
-          </button>
+          <input name="email" type="email" ref={register} required></input>
+          <label>Message</label>
+          <textarea name="message" ref={register} required></textarea>
+          <button>Send Message</button>
         </form>
       </div>
     </>

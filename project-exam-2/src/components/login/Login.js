@@ -33,7 +33,7 @@ function Login() {
 
   // JSX code for login form
   const renderForm = (
-    <main className="form">
+    <main>
       {error ? <p>wrong password or username</p> : <></>}
       <form onSubmit={handleSubmit}>
         <span className="username span">Username</span>

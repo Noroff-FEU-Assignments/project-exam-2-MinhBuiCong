@@ -18,7 +18,7 @@ function HotelPage() {
   }, []);
 
   return (
-    <div className="p-4 min-h-screen">
+    <div>
       <h1>Hotels</h1>
       {hotels.map((hotel) => (
         <HotelCard link={`/hotels/${hotel.id}`} {...hotel} />

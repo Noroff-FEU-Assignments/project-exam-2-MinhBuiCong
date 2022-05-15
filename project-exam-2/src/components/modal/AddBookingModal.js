@@ -37,75 +37,39 @@ function AddBookingModal({ open, onClose }) {
           open ? "fixed" : "hidden"
         }`}
       >
-        <h2 className="text-center font-bold mb-6 text-xl">Add Booking</h2>
-        <button
-          className="absolute w-10 h-10 text-black flex justify-center items-center"
-          onClick={onClose}
-          style={{ right: 15, top: 15 }}
-        >
+        <h2>Add Booking</h2>
+        <button onClick={onClose} style={{ right: 15, top: 15 }}>
           <i className="fa fa-close"></i>
         </button>
-        <form className="flex flex-col" onSubmit={handleSubmit(onSubmit)}>
-          <div className="flex space-x-2 mb-4">
-            <div className="flex flex-1 flex-col">
+        <form onSubmit={handleSubmit(onSubmit)}>
+          <div>
+            <div>
               <label>First Name</label>
-              <input
-                name="firstName"
-                className="py-3 px-2 rounded-lg shadow-xl w-full"
-                type="text"
-                ref={register}
-              ></input>
+              <input name="firstName" type="text" ref={register}></input>
             </div>
-            <div className="flex flex-1 flex-col">
+            <div>
               <label>Last Name</label>
-              <input
-                name="lastName"
-                className="py-3 px-2 rounded-lg shadow-xl w-full"
-                type="text"
-                ref={register}
-              ></input>
+              <input name="lastName" type="text" ref={register}></input>
             </div>
           </div>
-          <div className="flex flex-col flex-1 mb-4">
+          <div>
             <label>Phone Number</label>
-            <input
-              name="phoneNumber"
-              className="py-3 px-2 rounded-lg shadow-xl"
-              type="text"
-              ref={register}
-            ></input>
+            <input name="phoneNumber" type="text" ref={register}></input>
           </div>
-          <div className="flex flex-col flex-1 mb-4">
+          <div>
             <label>Email</label>
-            <input
-              name="email"
-              className="py-3 px-2 rounded-lg shadow-xl"
-              type="email"
-              ref={register}
-            ></input>
+            <input name="email" type="email" ref={register}></input>
           </div>
-          <div className="flex flex-1 flex-col mb-4">
+          <div>
             <label>Start Date</label>
-            <input
-              name="checkIn"
-              className="py-3 px-2 rounded-lg bg-white shadow-xl w-full"
-              type="date"
-              ref={register}
-            ></input>
+            <input name="checkIn" type="date" ref={register}></input>
           </div>
-          <div className="flex flex-1 flex-col mb-4">
+          <div>
             <label>End Date</label>
-            <input
-              name="checkOut"
-              className="py-3 px-2 rounded-lg bg-white shadow-xl w-full"
-              type="date"
-              ref={register}
-            ></input>
+            <input name="checkOut" type="date" ref={register}></input>
           </div>
-          <div className="flex justify-center">
-            <button className="bg-red-700 shadow-md px-2 py-3 text-white rounded-lg uppercase w-32">
-              Book Now
-            </button>
+          <div>
+            <button>Book Now</button>
           </div>
         </form>
       </div>

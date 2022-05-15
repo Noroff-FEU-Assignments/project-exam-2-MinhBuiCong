@@ -14,9 +14,9 @@ function ConfirmationModal({ open, message, onClose }) {
         open ? "fixed" : "hidden"
       }`}
     >
-      <div className="bg-gray-200 p-4 text-green-700 text-center py-8 px-4">
+      <div>
         <i className="fa fa-check text-5xl"></i>
-        <h2 className="text-center font-bold mb-6 text-xl">Confirmation</h2>
+        <h2>Confirmation</h2>
         <p>{message}</p>
       </div>
     </div>

@@ -15,23 +15,15 @@ function Messages() {
   }, []);
 
   return (
-    <div className="p-4 min-h-screen">
-      <h1 className="text-center font-bold text-green-800 text-2xl mb-4">
-        Messages
-      </h1>
-      <div className="flex flex-col space-y-2">
+    <div>
+      <h1>Messages</h1>
+      <div>
         {messages.map((message) => (
-          <div
-            key={message.id}
-            className="flex space-x-2 justify-items-stretch items-center"
-          >
-            <div
-              className="flex bg-white justify-center items-center flex-col border-gray-600 border-2 rounded-lg p-2 text-sm"
-              style={{ flex: 2 }}
-            >
+          <div key={message.id}>
+            <div>
               <p>{message.name}</p>
             </div>
-            <div className="flex-1 text-gray-700" style={{ flex: 6 }}>
+            <div>
               <p>"{message.message}"</p>
             </div>
           </div>

@@ -1,6 +1,10 @@
 import React, { useContext, useState } from "react";
 import { Link, useNavigate } from "react-router-dom";
 import { AuthContext } from "../../context/AuthContext";
+import NavBar from "react-bootstrap/Navbar";
+import NavLink from "react-bootstrap/NavLink";
+import Nav from "react-bootstrap/Nav";
+import Container from "react-bootstrap/Container";
 
 const NavLinks = ({ open, onClose }) => {
   const { isAuthenticated } = useContext(AuthContext);
@@ -37,13 +41,13 @@ const NavLinks = ({ open, onClose }) => {
   );
 };
 
-function Nav() {
+function Navbar() {
   const history = useNavigate();
   const { logout, isAuthenticated } = useContext(AuthContext);
   const [open, setOpen] = useState(false);
   return (
     <>
-      <NavLinks open={open} onClose={() => setOpen(false)} />
+      {/* <NavLinks open={open} onClose={() => setOpen(false)} />
       <nav className="p-4 w-full flex">
         <button
           className="w-10 h-10 bg-white shadow-lg flex justify-center items-center"
@@ -69,9 +73,28 @@ function Nav() {
             ></i>
           </div>
         </Link>
-      </nav>
+      </nav> */}
+      <NavBar className="navbar" expand={false}>
+        <Container className="container">
+          <NavBar.Brand href="/">Holidaze</NavBar.Brand>
+          <NavBar.Toggle aria-controls="basic-navbar-nav" />
+          <NavBar.Collapse id="basic-navbar-nav">
+            <Nav className="me-auto">
+              <NavLink className="link" to="/">
+                Drinks
+              </NavLink>
+              <NavLink className="link" to="/login">
+                Login
+              </NavLink>
+              <NavLink className="link" to="/contact">
+                Contact
+              </NavLink>
+            </Nav>
+          </NavBar.Collapse>
+        </Container>
+      </NavBar>
     </>
   );
 }
 
-export default Nav;
+export default Navbar;

@@ -19,7 +19,7 @@ function Hotels() {
   }, []);
 
   return (
-    <div className="p-4">
+    <div>
       <h1>Hotels</h1>
       {hotels.map((hotel) => (
         <HotelCard link={`/admin/hotels/edit/${hotel.id}`} {...hotel} />

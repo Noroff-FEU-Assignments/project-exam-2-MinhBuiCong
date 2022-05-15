@@ -24,35 +24,16 @@ function ContactPage() {
         onClose={onClose}
         message={"Your Query has been recorded successfully"}
       />
-      <div className="p-4 text-green-800 mb-12">
-        <h4 className="font-bold mb-2 text-lg">Contact Us</h4>
+      <div>
+        <h4>Contact Us</h4>
         <form onSubmit={handleSubmit(onSubmit)}>
-          <label className="mb-2">Name</label>
-          <input
-            className="rounded-lg px-2 py-3 w-full my-2 outline-none text-black shadow-lg"
-            name="name"
-            type="text"
-            ref={contact()}
-            required
-          ></input>
-          <label className="mb-2">Email</label>
-          <input
-            className="rounded-lg px-2 py-3 w-full my-2 outline-none text-black shadow-lg"
-            name="email"
-            type="email"
-            ref={contact()}
-            required
-          ></input>
-          <label className="mb-2">Message</label>
-          <textarea
-            className="rounded-lg px-2 py-3 w-full my-2 outline-none text-black h-32 shadow-lg"
-            name="message"
-            ref={contact()}
-            required
-          ></textarea>
-          <button className="bg-red-700 shadow-md px-2 py-3 text-white rounded-lg w-full uppercase">
-            Send Message
-          </button>
+          <label>Name</label>
+          <input name="name" type="text" ref={contact()} required></input>
+          <label>Email</label>
+          <input name="email" type="email" ref={contact()} required></input>
+          <label>Message</label>
+          <textarea name="message" ref={contact()} required></textarea>
+          <button>Send Message</button>
         </form>
       </div>
       <Footer />

@@ -31,12 +31,8 @@ function DeleteHotel(props) {
   }
 
   return (
-    <button
-      className="bg-white hover:bg-gray-400 text-red-500 font-bold px-2 py-3 rounded inline-flex items-center justify-center w-full shadow-lg"
-      onClick={checkDelete}
-      type="button"
-    >
-      <i className="fa fa-trash mr-2"></i> Delete
+    <button onClick={checkDelete} type="button">
+      <i className="fa fa-trash"></i> Delete
     </button>
   );
 }

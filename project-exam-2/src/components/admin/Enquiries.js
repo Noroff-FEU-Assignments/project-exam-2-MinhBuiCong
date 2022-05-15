@@ -34,46 +34,36 @@ function Enquiries() {
     establishments.find(({ id: eId }) => eId === id)?.name || id;
 
   return (
-    <div className="p-4 min-h-screen">
-      <h1 className="text-center font-bold text-green-800 text-xl mb-4">
-        Enquiries
-      </h1>
-      <div className="w-full overflow-auto">
-        <table className="table-auto">
+    <div>
+      <h1>Enquiries</h1>
+      <div>
+        <table>
           <thead>
             <tr>
-              <th className="px-4 py-2">Name</th>
-              <th className="px-4 py-2">Email</th>
-              <th className="px-4 py-2">Establishment</th>
-              <th className="px-4 py-2">Check-In</th>
-              <th className="px-4 py-2">Check-Out</th>
-              <th className="px-4 py-2">Actions</th>
+              <th>Name</th>
+              <th>Email</th>
+              <th>Establishment</th>
+              <th>Check-In</th>
+              <th>Check-Out</th>
+              <th>Actions</th>
             </tr>
           </thead>
-          <tbody className="text-gray-800">
+          <tbody>
             {enquiries.map(
               ({ id, name, email, establishmentId, checkIn, checkOut }) => (
                 <tr key={id}>
-                  <td className="px-4 py-2">{name}</td>
-                  <td className="px-4 py-2">{email}</td>
+                  <td>{name}</td>
+                  <td>{email}</td>
                   {establishmentId !== getEstablishment(establishmentId) ? (
                     <Link to={`/hotels/${id}`}>
-                      <td className="px-4 py-2 underline font-semibold">
-                        {getEstablishment(establishmentId)}
-                      </td>
+                      <td>{getEstablishment(establishmentId)}</td>
                     </Link>
                   ) : (
-                    <td className="px-4 py-2">
-                      {getEstablishment(establishmentId)}
-                    </td>
+                    <td>{getEstablishment(establishmentId)}</td>
                   )}
-                  <td className="px-4 py-2">
-                    {new Date(checkIn).toLocaleDateString()}
-                  </td>
-                  <td className="px-4 py-2">
-                    {new Date(checkOut).toLocaleDateString()}
-                  </td>
-                  <td className="px-4 py-2">
+                  <td>{new Date(checkIn).toLocaleDateString()}</td>
+                  <td>{new Date(checkOut).toLocaleDateString()}</td>
+                  <td>
                     <button className="" onClick={() => deleteEnquiry(id)}>
                       <i className="fa fa-trash"></i>
                     </button>
