@@ -20,13 +20,31 @@
     display: flex;
     .login-button {
       display: flex;
-      justify-content: end;
+      justify-content: flex-end;
+      background-color: $cta-color;
+      border: none;
+      transition: 0.3s;
+      margin-right: 0.5rem;
+    }
+
+    .login-button:hover {
+      box-shadow: $box-shadow;
+      opacity: 0.8;
     }
     .logout-button {
       display: none;
+      margin-right: 0.5rem;
+      transition: 0.3s;
+    }
+    .logout-button:hover {
+      box-shadow: $box-shadow;
+      opacity: 0.8;
     }
     .navbar-burger {
-      border: none;
+      border: 1px solid;
+    }
+    .navbar-burger:hover {
+      border: 1px solid rgba(0, 0, 0, 0.164);
     }
   }
   .navbar-dropdown-container {

@@ -1,4 +1,4 @@
-.contact-container {
+.enquiry-container {
   max-width: 1140px;
   margin: 0 auto 2rem auto;
   padding-top: 2rem;
@@ -7,7 +7,7 @@
   min-height: 100vh;
   font-family: $font-heading;
 
-  .admin-contact {
+  .admin-enquiry {
     display: none;
   }
   .form-container {
@@ -45,7 +45,7 @@
 }
 
 @media screen and (max-width: 768px) {
-  .contact-container {
+  .enquiry-container {
     .form-container {
       max-width: 500px;
 
@@ -59,7 +59,7 @@
 }
 
 @media screen and (max-width: 540px) {
-  .contact-container {
+  .enquiry-container {
     .form-container {
       min-width: 300px;
     }

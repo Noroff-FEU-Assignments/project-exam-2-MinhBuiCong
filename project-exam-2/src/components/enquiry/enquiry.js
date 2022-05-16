@@ -2,12 +2,12 @@ import React from "react";
 import Form from "react-bootstrap/Form";
 import Button from "react-bootstrap/Button";
 
-function ContactPage() {
+function EnquiryPage() {
   // const loggedIn = () => {
   //   return (
-  //     <main className="contact-container">
+  //     <main className="enquiry-container">
   //       <h1 className="title">
-  //         Contact Holidaze <span className="admin-contact">- Admin</span>
+  //         Enquiry page <span className="admin-enquiry">- Admin</span>
   //       </h1>
   //       <div className="message-container">
   //         <div className="message-person">
@@ -20,9 +20,9 @@ function ContactPage() {
   // };
 
   return (
-    <main className="contact-container">
+    <main className="enquiry-container">
       <h1 className="title">
-        Contact Holidaze <span className="admin-contact">- Admin</span>
+        Enquiry page <span className="admin-enquiry">- Admin</span>
       </h1>
 
       <Form className="form-container">
@@ -64,4 +64,4 @@ function ContactPage() {
   );
 }
 
-export default ContactPage;
+export default EnquiryPage;

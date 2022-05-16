@@ -14,8 +14,7 @@ import Navbar from "./components/layout/Nav";
 import Establishment from "./components/establishment/Establishment";
 import EstablishmentDetail from "./components/establishment/EstablishmentDetail";
 import Contact from "./components/contact/Contact";
-import Messages from "./components/admin/Messages";
-import Enquiries from "./components/admin/Enquiries";
+import EnquiryPage from "./components/enquiry/enquiry";
 import Footer from "./components/home/components/Footer";
 
 function App() {
@@ -30,9 +29,8 @@ function App() {
           <Route path="/hotels/:id" element={<EstablishmentDetail />} />
           <Route exact path="/hotels" element={<Establishment />} />
           <Route path="/contact" element={<Contact />} />
+          <Route path="/enquiry" element={<EnquiryPage />} />
           <Route exact path="/admin" element={<Dashboard />} />
-          <Route exact path="/admin/messages" element={<Messages />} />
-          <Route exact path="/admin/enquiries" element={<Enquiries />} />
           <Route exact path="/admin/hotels" element={<Hotels />} />
           <Route exact path="/admin/hotels/add" element={<AddHotel />} />
           <Route exact path="/admin/hotels/edit/:id" element={<EditHotel />} />

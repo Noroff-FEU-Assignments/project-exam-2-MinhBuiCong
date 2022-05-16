@@ -1,6 +1,6 @@
 import React from "react";
 import Card from "react-bootstrap/Card";
-import Button from "react-bootstrap/Button";
+import { Link } from "react-router-dom";
 
 function HotelCard() {
   return (
@@ -11,7 +11,9 @@ function HotelCard() {
           <Card.Title className="card-title">Card Title</Card.Title>
           <Card.Text className="card-subtitle">Location</Card.Text>
           <Card.Text className="card-description">Description...</Card.Text>
-          <Button className="card-button">Go somewhere</Button>
+          <Link to="/enquiry" className="card-button">
+            Make an enquiry
+          </Link>
         </Card.Body>
       </Card>
     </main>
