@@ -10,6 +10,7 @@ import EnquiryPage from "./components/enquiry/enquiry";
 import Footer from "./components/home/components/Footer";
 import HotelPage from "./components/hotels/HotelPage";
 import Dashboard from "./components/admin/Dashboard";
+import Establishment from "./components/establishment/Establishment";
 
 function App() {
   return (
@@ -21,6 +22,7 @@ function App() {
         <Route path="/contact" element={<Contact />} />
         <Route path="/enquiry" element={<EnquiryPage />} />
         <Route path="/hotels" element={<HotelPage />} />
+        <Route path="/admin/establishment" element={<Establishment />} />
         <Route exact path="/admin" element={<Dashboard />} />
         <Route to="/" />
       </Routes>

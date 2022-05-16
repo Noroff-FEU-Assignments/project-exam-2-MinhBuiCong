@@ -10,7 +10,7 @@ function Dashboard() {
       </h1>
       <div className="category-container">
         <h2 className="subtitle">Dashboard</h2>
-        <Link to="/admin/hotels">
+        <Link to="/hotels">
           <Button className="button">View establishments</Button>
         </Link>
         <Link to="/admin/hotels/add">

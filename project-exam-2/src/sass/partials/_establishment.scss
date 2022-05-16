@@ -1,0 +1,71 @@
+.establishment-container {
+  max-width: 1140px;
+  margin: 0 auto 2rem auto;
+  padding-top: 2rem;
+  padding-bottom: 4rem;
+  background-color: $secondary-color;
+  min-height: 100vh;
+  font-family: $font-heading;
+
+  .admin-establishment {
+    display: none;
+  }
+  .form-container {
+    background-color: white;
+    max-width: 700px;
+    margin: 2rem auto 0 auto;
+    padding: 2rem;
+
+    .group-input {
+      margin-right: 2rem;
+    }
+    .label {
+      font-weight: bold;
+    }
+    .input:focus {
+      box-shadow: none;
+    }
+  }
+  .group-input {
+    margin-bottom: 1rem;
+  }
+  .label {
+    font-weight: bold;
+  }
+  .input {
+    font-family: $font-text;
+    font-size: 16px;
+  }
+  .submit-button {
+    background-color: $cta-color;
+    border: none;
+    font-size: 16px;
+    transition: 0.3s;
+  }
+  .submit-button:focus {
+    box-shadow: none;
+  }
+  .submit-button:hover {
+    opacity: 0.8;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .establishment-container {
+    .form-container {
+      max-width: 500px;
+
+      .group-input {
+        width: 100%;
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 540px) {
+  .establishment-container {
+    .form-container {
+      min-width: 300px;
+    }
+  }
+}

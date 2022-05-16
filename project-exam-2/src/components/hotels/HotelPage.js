@@ -5,6 +5,7 @@ import Button from "react-bootstrap/Button";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faFilter } from "@fortawesome/free-solid-svg-icons";
 import { faAdd } from "@fortawesome/free-solid-svg-icons";
+import { Link } from "react-router-dom";
 
 function HotelPage() {
   const [filterOpen, setFilterOpen] = useState(false);
@@ -31,9 +32,11 @@ function HotelPage() {
         <Button className="brand-alternatives-button">brand</Button>
       </div>
       <div className="add-hotels-container">
-        <Button className="add-hotels-button">
-          <FontAwesomeIcon icon={faAdd} />
-        </Button>
+        <Link to="/admin/establishment">
+          <Button className="add-hotels-button">
+            <FontAwesomeIcon icon={faAdd} />
+          </Button>
+        </Link>
       </div>
       <HotelCard />
     </main>
