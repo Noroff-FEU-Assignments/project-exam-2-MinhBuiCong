@@ -21,26 +21,26 @@ function Navbar() {
             className="navbar-burger"
             aria-controls="basic-navbar-nav"
           />
-          <NavBar.Collapse
-            className="navbar-dropdown-container"
-            id="basic-navbar-nav"
-          >
-            <Nav className="me-auto">
-              <NavLink className="link" to="/">
-                Home
-              </NavLink>
-              <NavLink className="link" to="/hotels">
-                Hotels
-              </NavLink>
-              <NavLink className="link admin-link" to="/admin">
-                Admin
-              </NavLink>
-              <NavLink className="link" to="/contact">
-                Contact
-              </NavLink>
-            </Nav>
-          </NavBar.Collapse>
         </div>
+        <NavBar.Collapse
+          className="navbar-dropdown-container"
+          id="basic-navbar-nav"
+        >
+          <Nav className="me-auto">
+            <NavLink className="link" to="/">
+              Home
+            </NavLink>
+            <NavLink className="link" to="/hotels">
+              Hotels
+            </NavLink>
+            <NavLink className="link admin-link" to="/admin">
+              Admin
+            </NavLink>
+            <NavLink className="link" to="/contact">
+              Contact
+            </NavLink>
+          </Nav>
+        </NavBar.Collapse>
       </Container>
     </NavBar>
   );

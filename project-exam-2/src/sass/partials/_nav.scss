@@ -28,17 +28,17 @@
     .navbar-burger {
       border: none;
     }
-    .navbar-dropdown-container {
-      text-align: left;
-      padding: 1rem;
+  }
+  .navbar-dropdown-container {
+    text-align: left;
+    padding: 1rem;
 
-      .link {
-        color: white;
-        margin-bottom: 0.5rem;
-      }
-      .admin-link {
-        display: none;
-      }
+    .link {
+      color: white;
+      margin-bottom: 0.5rem;
+    }
+    .admin-link {
+      display: none;
     }
   }
 }
