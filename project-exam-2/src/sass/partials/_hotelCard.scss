@@ -2,6 +2,16 @@
   margin-bottom: 3rem;
 }
 
+.card-detail-link {
+  text-decoration: none;
+  color: inherit;
+}
+
+.card-detail-link:hover {
+  text-decoration: none;
+  color: inherit;
+}
+
 .card {
   display: flex;
   flex-direction: row;
