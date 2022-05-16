@@ -4,6 +4,8 @@ import NavBar from "react-bootstrap/Navbar";
 import Nav from "react-bootstrap/Nav";
 import Container from "react-bootstrap/Container";
 import Button from "react-bootstrap/Button";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faUser } from "@fortawesome/free-solid-svg-icons";
 
 function Navbar() {
   return (
@@ -14,7 +16,7 @@ function Navbar() {
         </NavBar.Brand>
         <div className="button-container">
           <NavLink to="/login" className="login-button">
-            login
+            <FontAwesomeIcon className="icon-login" icon={faUser} />
           </NavLink>
           <Button variant="danger" className="logout-button">
             log out

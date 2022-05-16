@@ -25,10 +25,14 @@
       border: none;
       transition: 0.3s;
       margin-right: 0.5rem;
+      padding: 0.2rem;
       color: white;
-      padding: 0.5rem;
       border-radius: $border-radius;
       text-decoration: none;
+      height: fit-content;
+      .icon-login {
+        padding: 0.5rem;
+      }
     }
 
     .login-button:hover {
