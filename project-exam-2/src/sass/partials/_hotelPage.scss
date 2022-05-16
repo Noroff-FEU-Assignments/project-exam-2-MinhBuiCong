@@ -15,7 +15,7 @@
     .filter-button {
       margin-top: 2rem;
       margin-bottom: 4rem;
-      background-color: $primary-color;
+      background-color: $footer-color;
       border: none;
       transition: 0.3s;
     }
@@ -32,12 +32,9 @@
     margin: 0 auto 2rem auto;
     padding: 2rem;
     width: 700px;
-    background-color: $primary-color;
+    background-color: $footer-color;
     border-radius: $border-radius;
     justify-content: space-around;
-  }
-  .filter-choice {
-    display: none;
 
     .brand-alternatives-button {
       background-color: $secondary-color;
@@ -48,6 +45,9 @@
     .brand-alternatives-button:hover {
       opacity: 0.8;
     }
+  }
+  .filter-choice {
+    display: none;
   }
 }
 
