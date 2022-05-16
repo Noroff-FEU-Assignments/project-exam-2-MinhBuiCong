@@ -6,6 +6,10 @@
   padding-top: 4rem;
   padding-bottom: 4rem;
 
+  .admin-title {
+    display: none;
+  }
+
   .filter-container {
     display: flex;
     justify-content: space-between;
@@ -48,6 +52,21 @@
   }
   .filter-choice {
     display: none;
+  }
+  .add-hotels-container {
+    max-width: 700px;
+    margin: 0 auto;
+    display: none;
+    .add-hotels-button {
+      background-color: $cta-color;
+      border: none;
+      transition: 0.3s;
+      max-width: 700px;
+      margin-bottom: 1rem;
+    }
+    .add-hotels-button:hover {
+      opacity: 0.8;
+    }
   }
 }
 

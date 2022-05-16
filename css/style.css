@@ -216,10 +216,17 @@ h1 {
   -webkit-transition: 0.3s;
   transition: 0.3s;
   margin-right: 0.5rem;
+  padding: 0.2rem;
   color: white;
-  padding: 0.5rem;
   border-radius: 5px;
   text-decoration: none;
+  height: -webkit-fit-content;
+  height: -moz-fit-content;
+  height: fit-content;
+}
+
+.navbar .button-container .login-button .icon-login {
+  padding: 0.5rem;
 }
 
 .navbar .button-container .login-button:hover {
@@ -279,7 +286,8 @@ h1 {
 }
 
 .search-container {
-  width: 700px;
+  max-width: 700px;
+  width: 600px;
   border: none;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -324,6 +332,11 @@ h1 {
   border: none;
 }
 
+.search-container .button:focus {
+  -webkit-box-shadow: none;
+          box-shadow: none;
+}
+
 .search-container:hover {
   -webkit-box-shadow: 6px 3px 22px -6px rgba(0, 0, 0, 0.1);
           box-shadow: 6px 3px 22px -6px rgba(0, 0, 0, 0.1);
@@ -331,7 +344,7 @@ h1 {
 
 @media screen and (max-width: 768px) {
   .search-container {
-    width: 500px;
+    max-width: 400px;
   }
 }
 
@@ -350,6 +363,12 @@ h1 {
   }
   .search-container .input::placeholder {
     font-size: 16px;
+  }
+}
+
+@media screen and (max-width: 400px) {
+  .search-container {
+    margin: 1rem auto;
   }
 }
 
@@ -508,6 +527,131 @@ h1 {
 @media screen and (max-width: 540px) {
   .card {
     max-width: 300px;
+  }
+}
+
+.hotel-page-container {
+  max-width: 1140px;
+  background-color: #fff5d3;
+  margin: 0 auto 4rem auto;
+  min-height: 100vh;
+  padding-top: 4rem;
+  padding-bottom: 4rem;
+}
+
+.hotel-page-container .filter-container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  max-width: 700px;
+  margin: 0 auto;
+}
+
+.hotel-page-container .filter-container .filter-button {
+  margin-top: 2rem;
+  margin-bottom: 4rem;
+  background-color: #fabca0;
+  border: none;
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
+}
+
+.hotel-page-container .filter-container .filter-button:hover {
+  opacity: 0.8;
+}
+
+.hotel-page-container .filter-container .filter-button:focus {
+  -webkit-box-shadow: none;
+          box-shadow: none;
+}
+
+.hotel-page-container .filter-choice-visible {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  margin: 0 auto 2rem auto;
+  padding: 2rem;
+  width: 700px;
+  background-color: #fabca0;
+  border-radius: 5px;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+}
+
+.hotel-page-container .filter-choice-visible .brand-alternatives-button {
+  background-color: #fff5d3;
+  border: none;
+  color: #3c3c3c;
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
+}
+
+.hotel-page-container .filter-choice-visible .brand-alternatives-button:hover {
+  opacity: 0.8;
+}
+
+.hotel-page-container .filter-choice {
+  display: none;
+}
+
+@media screen and (max-width: 768px) {
+  .hotel-page-container .filter-container {
+    max-width: 500px;
+  }
+  .hotel-page-container .filter-choice-visible {
+    width: 500px;
+  }
+  .hotel-page-container .filter-choice-visible .brand-alternatives-button {
+    margin: 0 0.2rem;
+  }
+}
+
+@media screen and (max-width: 540px) {
+  .hotel-page-container .filter-container {
+    -ms-flex-pack: distribute;
+        justify-content: space-around;
+    min-width: 300px;
+  }
+  .hotel-page-container .filter-container .filter-button {
+    max-width: 300px;
+  }
+  .hotel-page-container .filter-choice-visible {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    width: 300px;
+  }
+  .hotel-page-container .filter-choice-visible .brand-alternatives-button {
+    width: -webkit-fit-content;
+    width: -moz-fit-content;
+    width: fit-content;
+    margin: 0.5rem;
+  }
+}
+
+@media screen and (max-width: 400px) {
+  .hotel-page-container .filter-container {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  .hotel-page-container .filter-container .filter-button {
+    margin: 1rem auto;
+  }
+  .hotel-page-container .filter-container .filter-button:focus {
+    -webkit-box-shadow: none;
+            box-shadow: none;
   }
 }
 

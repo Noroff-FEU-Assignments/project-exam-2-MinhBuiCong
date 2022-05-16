@@ -1,0 +1,37 @@
+.dashboard-container {
+  max-width: 1140px;
+  background-color: $secondary-color;
+  margin: 0 auto 4rem auto;
+  min-height: 100vh;
+  padding: 4rem 0;
+  font-family: $font-heading;
+
+  .category-container {
+    max-width: 700px;
+    background-color: white;
+    margin: 2rem auto;
+    padding: 2rem;
+    border-radius: $border-radius;
+
+    .button {
+      background-color: $cta-color;
+      border: none;
+      transition: 0.3s;
+      margin: 0.5rem;
+    }
+    .button:hover {
+      opacity: 0.8;
+    }
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .category-container {
+    width: 500px;
+  }
+}
+@media screen and (max-width: 540px) {
+  .category-container {
+    width: 300px;
+  }
+}
