@@ -1,5 +1,6 @@
 .search-container {
-  width: 700px;
+  max-width: 700px;
+  width: 600px;
   border: none;
   display: flex;
   font-family: $font-heading;
@@ -26,6 +27,9 @@
     background-color: $cta-color;
     border: none;
   }
+  .button:focus {
+    box-shadow: none;
+  }
 }
 
 .search-container:hover {
@@ -34,7 +38,7 @@
 
 @media screen and (max-width: 768px) {
   .search-container {
-    width: 500px;
+    max-width: 400px;
   }
 }
 
@@ -45,5 +49,10 @@
     .input::placeholder {
       font-size: 16px;
     }
+  }
+}
+@media screen and (max-width: 400px) {
+  .search-container {
+    margin: 1rem auto;
   }
 }

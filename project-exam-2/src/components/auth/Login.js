@@ -9,11 +9,15 @@ function Login() {
       <Form className="form-container">
         <Form.Group className="group-input" controlId="loginEmail">
           <Form.Label className="label">Email</Form.Label>
-          <Form.Control defaultValue="John@doe.com" />
+          <Form.Control className="input" placeholder="John@doe.com" />
         </Form.Group>
         <Form.Group className="group-input" controlId="loginPassword">
           <Form.Label className="label">Password</Form.Label>
-          <Form.Control type="password" placeholder="Password" />
+          <Form.Control
+            className="input"
+            type="password"
+            placeholder="Password"
+          />
         </Form.Group>
         <Button className="submit-button">Log in</Button>
       </Form>

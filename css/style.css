@@ -416,6 +416,10 @@ h1 {
   }
 }
 
+.card-container {
+  margin-bottom: 3rem;
+}
+
 .card {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -438,8 +442,11 @@ h1 {
 
 .card .card-image {
   width: 250px;
-  height: 100%;
   background-color: #f68e5f;
+  -o-object-fit: cover;
+     object-fit: cover;
+  -o-object-position: center;
+     object-position: center;
 }
 
 .card .card-text-container .card-title {
@@ -506,5 +513,41 @@ h1 {
 
 .login-container {
   background-color: #fff5d3;
+  max-width: 1140px;
+  margin: 0 auto;
+  font-family: "Poppins", sans-serif;
+  min-height: 100vh;
+  padding-top: 4rem;
+}
+
+.login-container .form-container {
+  max-width: 700px;
+  margin: 2rem auto 0 auto;
+  background-color: white;
+  padding: 2rem;
+  border-radius: 5px;
+}
+
+.login-container .form-container .group-input {
+  margin-bottom: 1rem;
+}
+
+.login-container .form-container .label {
+  font-weight: bold;
+}
+
+.login-container .form-container .input {
+  font-size: 16px;
+}
+
+.login-container .submit-button {
+  background-color: #196b89;
+  border: none;
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
+}
+
+.login-container .submit-button:hover {
+  opacity: 0.8;
 }
 /*# sourceMappingURL=style.css.map */

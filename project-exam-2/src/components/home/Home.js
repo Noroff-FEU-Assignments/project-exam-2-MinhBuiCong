@@ -17,6 +17,8 @@ const Home = () => {
       <h1 className="title">Book your hotel</h1>
       <Search />
       <HotelCard />
+      <HotelCard />
+      <HotelCard />
     </main>
   );
 };
