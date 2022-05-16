@@ -1,9 +1,10 @@
 .hotel-page-container {
   max-width: 1140px;
   background-color: $secondary-color;
-  margin: 0 auto;
+  margin: 0 auto 4rem auto;
   min-height: 100vh;
   padding-top: 4rem;
+  padding-bottom: 4rem;
 
   .filter-container {
     display: flex;
@@ -22,6 +23,31 @@
     .filter-button:hover {
       opacity: 0.8;
     }
+    .filter-button:focus {
+      box-shadow: none;
+    }
+  }
+  .filter-choice-visible {
+    display: flex;
+    margin: 0 auto 2rem auto;
+    padding: 2rem;
+    width: 700px;
+    background-color: $primary-color;
+    border-radius: $border-radius;
+    justify-content: space-around;
+  }
+  .filter-choice {
+    display: none;
+
+    .brand-alternatives-button {
+      background-color: $secondary-color;
+      border: none;
+      color: $text-color;
+      transition: 0.3s;
+    }
+    .brand-alternatives-button:hover {
+      opacity: 0.8;
+    }
   }
 }
 
@@ -29,6 +55,12 @@
   .hotel-page-container {
     .filter-container {
       max-width: 500px;
+    }
+    .filter-choice-visible {
+      width: 500px;
+      .brand-alternatives-button {
+        margin: 0 0.2rem;
+      }
     }
   }
 }
@@ -40,6 +72,16 @@
 
       .filter-button {
         max-width: 300px;
+      }
+    }
+    .filter-choice-visible {
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      width: 300px;
+      .brand-alternatives-button {
+        width: fit-content;
+        margin: 0.5rem;
       }
     }
   }
