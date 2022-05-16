@@ -14,7 +14,7 @@ const Home = () => {
 
   return (
     <main className="home-container">
-      <h1 classname="title">Book your hotel</h1>
+      <h1 className="title">Book your hotel</h1>
       <Search />
       <HotelCard />
     </main>
