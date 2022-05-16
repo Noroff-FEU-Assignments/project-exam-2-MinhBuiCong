@@ -13,7 +13,9 @@ function Navbar() {
           Holidaze
         </NavBar.Brand>
         <div className="button-container">
-          <Button className="login-button">login</Button>
+          <NavLink to="/login" className="login-button">
+            login
+          </NavLink>
           <Button variant="danger" className="logout-button">
             log out
           </Button>

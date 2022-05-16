@@ -1,54 +1,23 @@
-import React, { useContext } from "react";
-import { useForm } from "react-hook-form";
-import { Link, useNavigate } from "react-router-dom";
-import { AuthContext } from "../../context/AuthContext";
-import useConfirmationModal from "../../hooks/useConfirmationModal";
-import ConfirmationModal from "../modal/ConfirmationModal";
+import React from "react";
+import Form from "react-bootstrap/Form";
+import Button from "react-bootstrap/Button";
 
 function Login() {
-  const { login } = useContext(AuthContext);
-  const { register, handleSubmit } = useForm();
-  const [open, openModal, onClose] = useConfirmationModal();
-  const history = useNavigate();
-
-  function onSubmit(credentials) {
-    if (login(credentials)) {
-      openModal();
-    }
-    console.log("data", credentials);
-  }
-
   return (
-    <>
-      <ConfirmationModal
-        message="Login successful"
-        open={open}
-        onClose={() => {
-          onClose();
-          history.push("/admin");
-        }}
-      />
-      <form onSubmit={handleSubmit(onSubmit)}>
-        <h2>Login</h2>
-        <div>
-          <label>Username</label>
-          <input type="text" name="username" ref={register}></input>
-        </div>
-        <div>
-          <label>Password</label>
-          <input type="password" name="password" ref={register}></input>
-        </div>
-        <div>
-          <button ref={register}>Login</button>
-        </div>
-        <p>
-          Don't have an account?{" "}
-          <Link to="/register">
-            <span>Register</span>
-          </Link>
-        </p>
-      </form>
-    </>
+    <main className="login-container">
+      <h1 className="title">Log in</h1>
+      <Form className="form-container">
+        <Form.Group className="group-input" controlId="loginEmail">
+          <Form.Label className="label">Email</Form.Label>
+          <Form.Control defaultValue="John@doe.com" />
+        </Form.Group>
+        <Form.Group className="group-input" controlId="loginPassword">
+          <Form.Label className="label">Password</Form.Label>
+          <Form.Control type="password" placeholder="Password" />
+        </Form.Group>
+        <Button className="submit-button">Log in</Button>
+      </Form>
+    </main>
   );
 }
 

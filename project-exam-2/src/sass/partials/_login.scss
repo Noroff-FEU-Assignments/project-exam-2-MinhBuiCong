@@ -1,0 +1,31 @@
+.login-container {
+  background-color: $secondary-color;
+  max-width: 1140px;
+  margin: 0 auto;
+  font-family: $font-heading;
+  min-height: 100vh;
+  padding-top: 4rem;
+
+  .form-container {
+    max-width: 700px;
+    margin: 2rem auto 0 auto;
+    background-color: white;
+    padding: 2rem;
+    border-radius: $border-radius;
+
+    .group-input {
+      margin-bottom: 1rem;
+    }
+    .label {
+      font-weight: bold;
+    }
+  }
+  .submit-button {
+    background-color: $cta-color;
+    border: none;
+    transition: 0.3s;
+  }
+  .submit-button:hover {
+    opacity: 0.8;
+  }
+}
