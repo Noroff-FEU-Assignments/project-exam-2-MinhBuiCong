@@ -1,5 +1,10 @@
 import React from "react";
-import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+import {
+  BrowserRouter as Router,
+  Routes,
+  Route,
+  Navigate,
+} from "react-router-dom";
 import "./sass/style.scss";
 //import components
 import Home from "./components/home/Home";
@@ -11,8 +16,16 @@ import Footer from "./components/home/components/Footer";
 import HotelPage from "./components/hotels/HotelPage";
 import Dashboard from "./components/admin/Dashboard";
 import Establishment from "./components/establishment/Establishment";
+import { getUsername } from "./components/auth/storage";
 
 function App() {
+  const ProtectedRoute = ({ user, children }) => {
+    if (!user) {
+      return <Navigate to="/" />;
+    }
+    return children;
+  };
+
   return (
     <Router>
       <Navbar />
@@ -22,8 +35,23 @@ function App() {
         <Route path="/contact" element={<Contact />} />
         <Route path="/enquiry" element={<EnquiryPage />} />
         <Route path="/hotels" element={<HotelPage />} />
-        <Route path="/admin/establishment" element={<Establishment />} />
-        <Route exact path="/admin" element={<Dashboard />} />
+        <Route
+          path="/admin/establishment"
+          element={
+            <ProtectedRoute user={getUsername()}>
+              <Establishment />
+            </ProtectedRoute>
+          }
+        />
+        <Route
+          exact
+          path="/admin"
+          element={
+            <ProtectedRoute user={getUsername()}>
+              <Dashboard />
+            </ProtectedRoute>
+          }
+        />
         <Route to="/" />
       </Routes>
       <Footer />

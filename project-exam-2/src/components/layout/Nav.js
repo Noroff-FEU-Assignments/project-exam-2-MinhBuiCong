@@ -6,6 +6,7 @@ import Container from "react-bootstrap/Container";
 import Button from "react-bootstrap/Button";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faUser } from "@fortawesome/free-solid-svg-icons";
+import { getUsername } from "../auth/storage";
 
 function Navbar() {
   return (
@@ -18,9 +19,13 @@ function Navbar() {
           <NavLink to="/login" className="login-button">
             <FontAwesomeIcon className="icon-login" icon={faUser} />
           </NavLink>
-          <Button variant="danger" className="logout-button">
-            log out
-          </Button>
+          {getUsername() ? (
+            <Button variant="danger" className="logout-button">
+              log out
+            </Button>
+          ) : (
+            <></>
+          )}
           <NavBar.Toggle
             className="navbar-burger"
             aria-controls="basic-navbar-nav"
