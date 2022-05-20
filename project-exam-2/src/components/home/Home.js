@@ -6,19 +6,27 @@ import HotelCard from "../card/HotelCard";
 import { getHotels } from "../../constants/api";
 
 const Home = () => {
-  const [hotels, setHotels] = useState("");
+  const [hotels, setHotels] = useState([]);
   useEffect(() => {
-    getHotels(setHotels);
+    const fetchHotels = async () => {
+      const result = await getHotels();
+
+      setHotels(result.data);
+    };
+    fetchHotels();
   }, []);
-  console.log(hotels.data);
+
+  console.log("1", hotels);
 
   return (
     <main className="home-container">
       <h1 className="title">Book your hotel</h1>
       <Search />
-      <HotelCard />
-      <HotelCard />
-      <HotelCard />
+      {hotels !== null ? (
+        hotels.map((hotel) => <HotelCard {...hotel.attributes} />)
+      ) : (
+        <></>
+      )}
     </main>
   );
 };

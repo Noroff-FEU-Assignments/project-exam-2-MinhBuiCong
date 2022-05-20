@@ -1,21 +1,29 @@
 import React from "react";
 import Card from "react-bootstrap/Card";
+import Button from "react-bootstrap/Button";
 import { Link } from "react-router-dom";
+import { getUsername } from "../auth/storage";
 import image from "../../images/image-1.jpg";
 
-function HotelCard() {
+function HotelCard(props) {
+  const { name, subtitle, description, uid, id } = props;
   return (
-    <main className="card-container">
+    <main className="card-container" key={id}>
       <Link className="card-detail-link" to="/hotel-detail">
         <Card className="card">
           <Card.Img className="card-image" src={image} alt="image" />
           <Card.Body className="card-text-container">
-            <Card.Title className="card-title">Card Title</Card.Title>
-            <Card.Text className="card-subtitle">Location</Card.Text>
-            <Card.Text className="card-description">Description...</Card.Text>
-            <Link to="/enquiry" className="card-button">
-              Make an enquiry
-            </Link>
+            <Card.Title className="card-title">{name}</Card.Title>
+            <Card.Text className="card-subtitle">{subtitle}</Card.Text>
+            <Card.Text className="card-description">{description}</Card.Text>
+            <Button className="card-button">Make an enquiry</Button>
+            {getUsername() ? (
+              <Button className="card-button card-button-delete">
+                Delete Hotel
+              </Button>
+            ) : (
+              <></>
+            )}
           </Card.Body>
         </Card>
       </Link>

@@ -19,6 +19,7 @@ import Establishment from "./components/establishment/Establishment";
 import { getUsername } from "./components/auth/storage";
 
 function App() {
+  console.log("hello");
   const ProtectedRoute = ({ user, children }) => {
     if (!user) {
       return <Navigate to="/" />;
