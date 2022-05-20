@@ -3,6 +3,7 @@ import Form from "react-bootstrap/Form";
 import Button from "react-bootstrap/Button";
 import DoLogin from "./DoLogin";
 import { useNavigate } from "react-router-dom";
+import { Navigate } from "react-router-dom";
 
 function Login() {
   const [username, setUsername] = useState("");
@@ -11,9 +12,7 @@ function Login() {
   let history = useNavigate();
   async function handleSubmit(event) {
     event.preventDefault();
-
     if (await DoLogin(username, password)) {
-      await new Promise((resolve) => setTimeout(resolve, 3000));
       history("/admin");
     } else {
       setLoginError(true);

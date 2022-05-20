@@ -25,6 +25,7 @@ export function getUsername() {
 
 export function clearStorage() {
   localStorage.clear();
+  window.location.reload(true);
 }
 
 function saveToStorage(key, value) {
