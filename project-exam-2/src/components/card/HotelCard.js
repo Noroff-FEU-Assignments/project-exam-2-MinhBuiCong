@@ -6,11 +6,12 @@ import image from "../../images/image-1.jpg";
 import { getUsername } from "../auth/storage";
 
 function HotelCard(props) {
-  const { name, subtitle, description, uid, id } = props;
+  const { name, subtitle, description, uid } = props;
+  console.log(props);
 
   return (
     <main className="card-container">
-      <Link className="card-detail-link" to="/hotel-detail">
+      <Link className="card-detail-link" to={`api/hotel-detail?id=${uid}`}>
         <Card className="card">
           <Card.Img className="card-image" src={image} alt={uid} />
           <Card.Body className="card-text-container">
