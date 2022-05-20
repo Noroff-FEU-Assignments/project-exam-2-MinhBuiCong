@@ -5,7 +5,10 @@ import Nav from "react-bootstrap/Nav";
 import Container from "react-bootstrap/Container";
 import Button from "react-bootstrap/Button";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faUser } from "@fortawesome/free-solid-svg-icons";
+import {
+  faUser,
+  faArrowRightFromBracket,
+} from "@fortawesome/free-solid-svg-icons";
 import { getUsername, clearStorage } from "../auth/storage";
 
 function Navbar() {
@@ -25,7 +28,10 @@ function Navbar() {
               variant="danger"
               className="logout-button"
             >
-              log out
+              <FontAwesomeIcon
+                className="icon-logout"
+                icon={faArrowRightFromBracket}
+              />
             </Button>
           ) : (
             <></>

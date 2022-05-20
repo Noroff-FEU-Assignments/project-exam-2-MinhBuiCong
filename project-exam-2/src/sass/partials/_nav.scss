@@ -43,6 +43,10 @@
       display: flex;
       margin-right: 0.5rem;
       transition: 0.3s;
+      border: none;
+      .icon-logout {
+        padding-top: 0.3rem;
+      }
     }
     .logout-button:hover {
       box-shadow: $box-shadow;
@@ -65,6 +69,31 @@
     }
     .admin-link {
       display: none;
+    }
+  }
+}
+
+@media screen and (max-width: 410px) {
+  .container > .button-container {
+    justify-content: center;
+    align-items: center;
+    .login-button {
+      background-color: transparent;
+      padding: 0;
+    }
+    .logout-button {
+      background-color: transparent;
+      padding: 0;
+      .icon-logout {
+        padding: 0;
+      }
+    }
+    .navbar-burger {
+      padding: 0;
+      border: none;
+    }
+    .navbar-burger:hover {
+      border: none;
     }
   }
 }

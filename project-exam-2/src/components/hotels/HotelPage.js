@@ -32,9 +32,6 @@ function HotelPage() {
               <FontAwesomeIcon icon={faAdd} />
             </Button>
           </Link>
-          <Button variant="danger" className="delete-hotels-button">
-            Delete Hotel
-          </Button>
         </div>
       ) : null}
       {hotels !== null
