@@ -7,11 +7,12 @@ import { getUsername } from "../auth/storage";
 
 function HotelCard(props) {
   const { name, subtitle, description, uid, id } = props;
+
   return (
     <main className="card-container">
       <Link className="card-detail-link" to="/hotel-detail">
         <Card className="card">
-          <Card.Img className="card-image" src={image} alt="image" />
+          <Card.Img className="card-image" src={image} alt={uid} />
           <Card.Body className="card-text-container">
             <Card.Title className="card-title">{name}</Card.Title>
             <Card.Text className="card-subtitle">{subtitle}</Card.Text>

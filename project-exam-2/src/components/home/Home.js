@@ -16,8 +16,6 @@ const Home = () => {
     fetchHotels();
   }, []);
 
-  console.log("1", hotels);
-
   return (
     <main className="home-container">
       <h1 className="title">Book your hotel</h1>

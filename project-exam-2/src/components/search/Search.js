@@ -6,9 +6,6 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faSearch } from "@fortawesome/free-solid-svg-icons";
 
 function Search(props) {
-  console.log({ props });
-
-  // const filtered = filteredHotels;
   return (
     <main>
       <Form className="search-container">

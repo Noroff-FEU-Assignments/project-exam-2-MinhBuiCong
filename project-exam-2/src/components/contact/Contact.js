@@ -4,10 +4,6 @@ import Button from "react-bootstrap/Button";
 import { getUsername } from "../auth/storage";
 
 function ContactPage() {
-  const loggedIn = () => {
-    return <main className="contact-container"></main>;
-  };
-
   return (
     <main className="contact-container">
       {getUsername() ? (

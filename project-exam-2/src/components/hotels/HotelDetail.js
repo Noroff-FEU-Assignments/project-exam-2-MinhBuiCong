@@ -6,7 +6,7 @@ function HotelDetail() {
     <main className="hotel-detail-container">
       <h1 className="title">hotel-name</h1>
       <div className="image-container">
-        <img className="image" alt="hotel-image" />
+        <img className="image" alt="hotelimage" />
       </div>
       <div className="hotel-info-container">
         <h2 className="info-title">Description</h2>
