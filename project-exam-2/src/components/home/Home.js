@@ -21,7 +21,7 @@ const Home = () => {
   return (
     <main className="home-container">
       <h1 className="title">Book your hotel</h1>
-      <Search />
+      <Search {...hotels} />
       {hotels !== null ? (
         hotels.map((hotel) => <HotelCard {...hotel.attributes} />)
       ) : (
