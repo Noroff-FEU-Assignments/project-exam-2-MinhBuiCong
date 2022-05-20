@@ -13,6 +13,18 @@
     padding: 2rem;
     border-radius: $border-radius;
 
+    .dashboard-button {
+      background-color: $cta-color;
+      color: white;
+      border: none;
+      transition: 0.3s;
+      border-radius: $border-radius;
+      padding: 0.5rem;
+      text-decoration: none;
+    }
+    .dashboard-button:hover {
+      opacity: 0.8;
+    }
     .group-input {
       margin-bottom: 1rem;
     }

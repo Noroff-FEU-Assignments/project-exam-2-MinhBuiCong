@@ -22,11 +22,9 @@ const Home = () => {
     <main className="home-container">
       <h1 className="title">Book your hotel</h1>
       <Search {...hotels} />
-      {hotels !== null ? (
-        hotels.map((hotel) => <HotelCard {...hotel.attributes} />)
-      ) : (
-        <></>
-      )}
+      {hotels !== null
+        ? hotels.map((hotel) => <HotelCard {...hotel.attributes} />)
+        : null}
     </main>
   );
 };

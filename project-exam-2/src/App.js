@@ -35,7 +35,14 @@ function App() {
         <Route exact path="/" element={<Home />} />
         <Route path="/login" element={<Login />} />
         <Route path="/contact" element={<Contact />} />
-        <Route path="/enquiry" element={<EnquiryPage />} />
+        <Route
+          path="/admin/enquiry"
+          element={
+            <ProtectedRoute user={getUsername()}>
+              <EnquiryPage />
+            </ProtectedRoute>
+          }
+        />
         <Route path="/hotels" element={<HotelPage />} />
         <Route path="/hotel-detail" element={<HotelDetail />} />
         <Route

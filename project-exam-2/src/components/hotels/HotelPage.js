@@ -36,14 +36,10 @@ function HotelPage() {
             Delete Hotel
           </Button>
         </div>
-      ) : (
-        <></>
-      )}
-      {hotels !== null ? (
-        hotels.map((hotel) => <HotelCard {...hotel.attributes} />)
-      ) : (
-        <></>
-      )}
+      ) : null}
+      {hotels !== null
+        ? hotels.map((hotel) => <HotelCard {...hotel.attributes} />)
+        : null}
     </main>
   );
 }

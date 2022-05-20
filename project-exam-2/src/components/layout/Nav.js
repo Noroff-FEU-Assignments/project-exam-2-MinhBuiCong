@@ -52,6 +52,11 @@ function Navbar() {
             <NavLink className="link" to="/contact">
               Contact
             </NavLink>
+            {getUsername() ? (
+              <NavLink className="link" to="/admin">
+                Dashboard
+              </NavLink>
+            ) : null}
           </Nav>
         </NavBar.Collapse>
       </Container>

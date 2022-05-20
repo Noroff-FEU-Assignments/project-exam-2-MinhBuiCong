@@ -5,44 +5,22 @@ import Button from "react-bootstrap/Button";
 function Establishment() {
   return (
     <main className="establishment-container">
-      <h1 className="title">
-        Establishment Holidaze{" "}
-        <span className="admin-establishment">- Admin</span>
-      </h1>
+      <h1 className="title">Establishment Holidaze - Admin</h1>
 
       <Form className="form-container">
         <Form.Group className="group-input" controlId="hotelName">
           <Form.Label className="label">Hotel name</Form.Label>
-          <Form.Control className="input" type="text" placeholder="Plaza" />
-        </Form.Group>
-        <Form.Group className="group-input" controlId="streetAddress">
-          <Form.Label className="label">Street address</Form.Label>
           <Form.Control
             className="input"
             type="text"
-            placeholder="main street"
+            placeholder="Hanoi Hotel"
           />
         </Form.Group>
         <Form.Group className="group-input" controlId="town">
-          <Form.Label className="label">Town</Form.Label>
-          <Form.Control
-            className="input"
-            type="text"
-            placeholder="Los Angeles"
-          />
+          <Form.Label className="label">Location</Form.Label>
+          <Form.Control className="input" type="text" placeholder="Vietnam" />
         </Form.Group>
-        <Form.Group className="group-input" controlId="postalCode">
-          <Form.Label className="label">Postal Code</Form.Label>
-          <Form.Control className="input" type="text" placeholder="0000" />
-        </Form.Group>
-        <Form.Group className="group-input" controlId="phoneNumber">
-          <Form.Label className="label">Hotel Phone number</Form.Label>
-          <Form.Control
-            className="input"
-            type="number"
-            placeholder="123 456 78"
-          />
-        </Form.Group>
+
         <Form.Group className="group-input" controlId="imageUpload">
           <Form.Label className="label">Upload Image</Form.Label>
           <Form.Control className="input" type="file" />

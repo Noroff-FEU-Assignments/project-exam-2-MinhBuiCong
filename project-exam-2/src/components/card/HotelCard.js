@@ -7,7 +7,7 @@ import image from "../../images/image-1.jpg";
 function HotelCard(props) {
   const { name, subtitle, description, uid, id } = props;
   return (
-    <main className="card-container" key={id}>
+    <main className="card-container">
       <Link className="card-detail-link" to="/hotel-detail">
         <Card className="card">
           <Card.Img className="card-image" src={image} alt="image" />
