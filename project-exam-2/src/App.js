@@ -16,6 +16,7 @@ import Footer from "./components/home/components/Footer";
 import HotelPage from "./components/hotels/HotelPage";
 import Dashboard from "./components/admin/Dashboard";
 import Establishment from "./components/establishment/Establishment";
+import HotelDetail from "./components/hotels/HotelDetail";
 import { getUsername } from "./components/auth/storage";
 
 function App() {
@@ -36,6 +37,7 @@ function App() {
         <Route path="/contact" element={<Contact />} />
         <Route path="/enquiry" element={<EnquiryPage />} />
         <Route path="/hotels" element={<HotelPage />} />
+        <Route path="/hotel-detail" element={<HotelDetail />} />
         <Route
           path="/admin/establishment"
           element={

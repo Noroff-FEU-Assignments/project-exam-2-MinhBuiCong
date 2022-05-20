@@ -2,7 +2,6 @@ import React from "react";
 import Card from "react-bootstrap/Card";
 import Button from "react-bootstrap/Button";
 import { Link } from "react-router-dom";
-import { getUsername } from "../auth/storage";
 import image from "../../images/image-1.jpg";
 
 function HotelCard(props) {
@@ -17,13 +16,6 @@ function HotelCard(props) {
             <Card.Text className="card-subtitle">{subtitle}</Card.Text>
             <Card.Text className="card-description">{description}</Card.Text>
             <Button className="card-button">Make an enquiry</Button>
-            {getUsername() ? (
-              <Button className="card-button card-button-delete">
-                Delete Hotel
-              </Button>
-            ) : (
-              <></>
-            )}
           </Card.Body>
         </Card>
       </Link>

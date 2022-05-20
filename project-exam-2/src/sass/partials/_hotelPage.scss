@@ -63,9 +63,16 @@
       transition: 0.3s;
       max-width: 700px;
       margin-bottom: 1rem;
+      margin-right: 2rem;
     }
     .add-hotels-button:hover {
       opacity: 0.8;
+    }
+    .delete-hotels-button {
+      border: none;
+      transition: 0.3s;
+      max-width: 700px;
+      margin-bottom: 1rem;
     }
   }
 }
