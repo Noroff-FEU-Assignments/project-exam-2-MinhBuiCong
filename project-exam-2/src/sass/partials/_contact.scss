@@ -74,8 +74,16 @@
   margin: 2rem auto 0 auto;
   padding: 2rem;
 
-  .message-name {
-    font-size: 22px;
+  .message-person {
+    display: flex;
+    max-width: 700px;
+    justify-content: space-between;
+    .message-name {
+      font-size: 22px;
+    }
+    .message-email {
+      font-size: 22px;
+    }
   }
   .message-text {
     border: 1px solid gray;

@@ -16,10 +16,10 @@ function Dashboard() {
         <Link to="/admin/establishment">
           <Button className="button">Create new establishment</Button>
         </Link>
-        <Link to="/admin/enquiries">
+        <Link to="/admin/enquiry">
           <Button className="button">See enquiries</Button>
         </Link>
-        <Link to="/contact">
+        <Link to="/admin/contact">
           <Button className="button">Messages</Button>
         </Link>
       </div>

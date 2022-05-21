@@ -2,8 +2,10 @@ import React from "react";
 import Form from "react-bootstrap/Form";
 import Button from "react-bootstrap/Button";
 import { getUsername } from "../auth/storage";
+import { getEnquiry } from "../../constants/api";
 
 function EnquiryPage() {
+  getEnquiry().then((res) => console.log(res));
   return (
     <main className="enquiry-container">
       {getUsername() ? (

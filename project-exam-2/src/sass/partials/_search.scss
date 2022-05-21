@@ -1,34 +1,13 @@
 .search-container {
   max-width: 700px;
-  width: 600px;
   border: none;
   display: flex;
   font-family: $font-heading;
   margin: 2rem auto 4rem auto;
   transition: 0.3s;
 
-  .input {
-    border-radius: 5px 0px 0px 5px;
-    border: none;
-    font-weight: bold;
-    color: $text-color;
-  }
-
-  .input::placeholder {
-    opacity: 0.4;
-  }
-
-  .input:focus {
-    box-shadow: none;
-  }
-
-  .button {
-    border-radius: 0px 5px 5px 0px;
-    background-color: $cta-color;
-    border: none;
-  }
-  .button:focus {
-    box-shadow: none;
+  .css-1s2u09g-control {
+    width: 700px;
   }
 }
 

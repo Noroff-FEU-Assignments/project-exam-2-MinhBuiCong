@@ -24,7 +24,7 @@ function HotelPage() {
         Hotels
         {getUsername() ? <span className="admin-title"> - Admin</span> : <></>}
       </h1>
-      <Search />
+      {/* <Search /> */}
       {getUsername() ? (
         <div className="add-hotels-container">
           <Link to="/admin/establishment">
@@ -34,9 +34,8 @@ function HotelPage() {
           </Link>
         </div>
       ) : null}
-      {hotels !== null
-        ? hotels.map((hotel) => <HotelCard {...hotel.attributes} />)
-        : null}
+      {hotels.length > 0 &&
+        hotels.map((hotel) => <HotelCard {...hotel.attributes} />)}
     </main>
   );
 }

@@ -18,6 +18,8 @@ import Dashboard from "./components/admin/Dashboard";
 import Establishment from "./components/establishment/Establishment";
 import HotelDetail from "./components/hotels/HotelDetail";
 import { getUsername } from "./components/auth/storage";
+import AdminContact from "./components/admin/AdminContact";
+import AdminEnquiry from "./components/admin/AdminEnquiry";
 
 function App() {
   const ProtectedRoute = ({ user, children }) => {
@@ -34,11 +36,12 @@ function App() {
         <Route exact path="/" element={<Home />} />
         <Route path="/login" element={<Login />} />
         <Route path="/contact" element={<Contact />} />
+        <Route path="/enquiry" element={<EnquiryPage />} />
         <Route
           path="/admin/enquiry"
           element={
             <ProtectedRoute user={getUsername()}>
-              <EnquiryPage />
+              <AdminEnquiry />
             </ProtectedRoute>
           }
         />
@@ -49,6 +52,14 @@ function App() {
           element={
             <ProtectedRoute user={getUsername()}>
               <Establishment />
+            </ProtectedRoute>
+          }
+        />
+        <Route
+          path="/admin/contact"
+          element={
+            <ProtectedRoute user={getUsername()}>
+              <AdminContact />
             </ProtectedRoute>
           }
         />
