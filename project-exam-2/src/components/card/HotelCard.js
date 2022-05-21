@@ -11,7 +11,11 @@ function HotelCard(props) {
   const { name, subtitle, description, uid, id } = props;
   console.log(props);
 
-  navigate("/enquiry");
+  const handleEnquiry = (e) => {
+    e.preventDefault();
+    e.stopPropagation();
+    navigate("/enquiry");
+  };
 
   return (
     <main className="card-container">
@@ -22,7 +26,7 @@ function HotelCard(props) {
             <Card.Title className="card-title">{name}</Card.Title>
             <Card.Text className="card-subtitle">{subtitle}</Card.Text>
             <Card.Text className="card-description">{description}</Card.Text>
-            <Button onClick={navigate} className="card-button">
+            <Button onClick={handleEnquiry} className="card-button">
               Make an enquiry
             </Button>
             {getUsername() ? (

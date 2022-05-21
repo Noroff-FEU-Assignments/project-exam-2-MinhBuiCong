@@ -24,6 +24,7 @@ function AdminContact() {
   const handleDelete = (id) => {
     deleteContact(id, fetchContact);
   };
+
   return (
     <main className="contact-container">
       <h1 className="title">Contact Holidaze - Admin</h1>
@@ -38,6 +39,7 @@ function AdminContact() {
             <p className="message-text">{c.attributes.message}</p>
           </>
         ))}
+        {contact.length === 0 && <p>No message here</p>}
       </div>
     </main>
   );

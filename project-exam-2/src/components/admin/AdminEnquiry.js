@@ -7,7 +7,7 @@ const fetchEnquiry = async () => {
 };
 
 function AdminEnquiry() {
-  const [Enquiry, setEnquiry] = useState([]);
+  const [enquiry, setEnquiry] = useState([]);
 
   const fetchEnquiry = async () => {
     const res = await getEnquiry();
@@ -25,10 +25,10 @@ function AdminEnquiry() {
     deleteEnquiry(id, fetchEnquiry);
   };
   return (
-    <main className="Enquiry-container">
+    <main className="enquiry-container">
       <h1 className="title">Enquiry Holidaze - Admin</h1>
       <div className="message-container">
-        {Enquiry.map((c) => (
+        {enquiry.map((c) => (
           <>
             <button onClick={() => handleDelete(c.id)}>Delete</button>
             <div className="message-person">
@@ -38,6 +38,7 @@ function AdminEnquiry() {
             <p className="message-text">{c.attributes.message}</p>
           </>
         ))}
+        {enquiry.length === 0 && <p>No message here</p>}
       </div>
     </main>
   );
