@@ -4,10 +4,22 @@ export const url = "https://gentle-plateau-64010.herokuapp.com";
 export const BASE_URL = url;
 
 export const getHotels = async () => {
-  const response = await axios.get(`${BASE_URL}/api/hotels`).catch((error) => {
-    console.log(error);
-  });
+  const response = await axios
+    .get(`${BASE_URL}/api/hotels?populate=*`)
+    .catch((error) => {
+      console.log(error);
+    });
 
+  return response.data;
+};
+
+export const addHotel = async (body) => {
+  const response = await axios
+    .post(`${BASE_URL}/api/hotels`, body, options)
+    .catch((error) => {
+      console.log(error);
+    });
+  console.log(response.data);
   return response.data;
 };
 
