@@ -17,7 +17,6 @@ async function DoLogin(username, password) {
   try {
     const response = await fetch(url, options);
     const json = await response.json();
-    console.log(`json`, json);
 
     if (json.user) {
       saveToken(json.jwt);

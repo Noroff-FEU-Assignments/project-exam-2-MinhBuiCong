@@ -7,8 +7,6 @@ function Login() {
   const [authenticated, setAuthenticated] = useState(false);
 
   const authenticateUser = async (name, password) => {
-    console.log(name);
-    console.log(password);
     await axios
       .post("http://localhost:1337/api/auth/local", {
         identifier: name,

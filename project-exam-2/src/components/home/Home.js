@@ -24,7 +24,7 @@ const Home = () => {
         <>
           <Search onSearch={setHotels} data={hotels} />
           {hotels.map((hotel) => (
-            <HotelCard {...hotel.attributes} />
+            <HotelCard key={hotel.id} {...hotel.attributes} />
           ))}
         </>
       )}

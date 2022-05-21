@@ -10,8 +10,6 @@ function AddHotel() {
   const history = useNavigate();
 
   async function onSubmit(data) {
-    console.log("data", data);
-
     const url = BASE_URL + "establishments";
 
     const options = { headers, method: "POST", body: JSON.stringify(data) };

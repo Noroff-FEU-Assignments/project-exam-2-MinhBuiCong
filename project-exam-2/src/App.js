@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import {
   BrowserRouter as Router,
   Routes,
@@ -29,12 +29,14 @@ function App() {
     return children;
   };
 
+  const [loggedIn, setLoggedIn] = useState(() => false || !!getUsername());
+
   return (
     <Router>
-      <Navbar />
+      <Navbar loggedIn={loggedIn} />
       <Routes>
         <Route exact path="/" element={<Home />} />
-        <Route path="/login" element={<Login />} />
+        <Route path="/login" element={<Login setLoggedIn={setLoggedIn} />} />
         <Route path="/contact" element={<Contact />} />
         <Route path="/enquiry" element={<EnquiryPage />} />
         <Route

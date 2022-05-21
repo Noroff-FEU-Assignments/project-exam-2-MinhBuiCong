@@ -9,7 +9,6 @@ import { useNavigate } from "react-router-dom";
 function HotelCard(props) {
   const navigate = useNavigate();
   const { name, subtitle, description, uid, id } = props;
-  console.log(props);
 
   const handleEnquiry = (e) => {
     e.preventDefault();
