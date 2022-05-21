@@ -1,6 +1,5 @@
 import React, { useState, useEffect } from "react";
 import HotelCard from "../card/HotelCard";
-import Search from "../search/Search";
 import Button from "react-bootstrap/Button";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faAdd } from "@fortawesome/free-solid-svg-icons";
@@ -24,7 +23,6 @@ function HotelPage() {
         Hotels
         {getUsername() ? <span className="admin-title"> - Admin</span> : <></>}
       </h1>
-      {/* <Search /> */}
       {getUsername() ? (
         <div className="add-hotels-container">
           <Link to="/admin/establishment">
@@ -35,7 +33,9 @@ function HotelPage() {
         </div>
       ) : null}
       {hotels.length > 0 &&
-        hotels.map((hotel) => <HotelCard {...hotel.attributes} />)}
+        hotels.map((hotel) => (
+          <HotelCard key={hotel.id} {...hotel.attributes} />
+        ))}
     </main>
   );
 }
