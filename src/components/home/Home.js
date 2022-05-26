@@ -5,13 +5,24 @@ import { getHotels } from "../../constants/api";
 
 const Home = () => {
   const [hotels, setHotels] = useState([]);
+  const [loading, setLoading] = useState(true);
+
   useEffect(() => {
     const fetchHotels = async () => {
       const result = await getHotels();
       setHotels(result.data);
+      setLoading(false);
     };
     fetchHotels();
   }, []);
+
+  if (loading) {
+    return (
+      <main className="home-container">
+        <div className="loader"></div>
+      </main>
+    );
+  }
 
   return (
     <main className="home-container">

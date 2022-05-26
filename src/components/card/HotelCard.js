@@ -34,7 +34,7 @@ function HotelCard(props) {
       ) : null}
       <Link
         className="card-detail-link"
-        to={`hotel-detail/${id}`}
+        to={`/hotel-detail/${id}`}
         state={{ props: props }}
       >
         <Card className="card">

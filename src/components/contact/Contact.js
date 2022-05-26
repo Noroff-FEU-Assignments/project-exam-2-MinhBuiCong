@@ -17,6 +17,7 @@ function ContactPage() {
       .catch((e) => console.error(e));
     window.location.reload();
   };
+
   return (
     <main className="contact-container">
       <h1 className="title">Contact Holidaze</h1>
