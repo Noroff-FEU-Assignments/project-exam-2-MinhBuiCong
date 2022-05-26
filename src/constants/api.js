@@ -3,6 +3,14 @@ import { getToken } from "../components/auth/storage";
 export const url = "https://gentle-plateau-64010.herokuapp.com";
 export const BASE_URL = url;
 
+const options = {
+  headers: {
+    Authorization: `Bearer ${getToken()}`,
+  },
+};
+
+// Fetch hotels data
+
 export const getHotels = async () => {
   const response = await axios
     .get(`${BASE_URL}/api/hotels?populate=*`)
@@ -23,11 +31,16 @@ export const addHotel = async (body) => {
   return response.data;
 };
 
-const options = {
-  headers: {
-    Authorization: `Bearer ${getToken()}`,
-  },
+export const deleteHotel = (id) => {
+  axios
+    .delete(`${BASE_URL}/api/hotels/${id}`, options)
+    .then()
+    .catch((error) => {
+      console.log(error);
+    });
 };
+
+// Fetch contact data
 
 export const getContact = async () => {
   const response = await axios
@@ -55,6 +68,9 @@ export const postContact = async (body) => {
 
   return response.data;
 };
+
+//fetch enquiry data
+
 export const postEnquiry = async (body) => {
   const response = await axios
     .post(`${BASE_URL}/api/enquiries`, body)

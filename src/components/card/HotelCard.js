@@ -4,6 +4,7 @@ import Button from "react-bootstrap/Button";
 import { Link } from "react-router-dom";
 import { getUsername } from "../auth/storage";
 import { useNavigate } from "react-router-dom";
+import { deleteHotel } from "../../constants/api";
 
 function HotelCard(props) {
   const navigate = useNavigate();
@@ -16,9 +17,21 @@ function HotelCard(props) {
     e.stopPropagation();
     navigate("/enquiry");
   };
+  const handleDelete = (id) => {
+    deleteHotel(id);
+    navigate("/");
+  };
 
   return (
     <main className="card-container">
+      {getUsername() ? (
+        <Button
+          onClick={() => handleDelete(id)}
+          className="card-button delete-hotel-button"
+        >
+          Delete Hotel
+        </Button>
+      ) : null}
       <Link className="card-detail-link" to={`api/hotel-detail?id=${id}`}>
         <Card className="card">
           <Card.Img
@@ -33,11 +46,6 @@ function HotelCard(props) {
             <Button onClick={handleEnquiry} className="card-button">
               Make an enquiry
             </Button>
-            {getUsername() ? (
-              <Button className="card-button delete-hotel-button">
-                Delete Hotel
-              </Button>
-            ) : null}
           </Card.Body>
         </Card>
       </Link>

@@ -74,13 +74,34 @@
   margin: 2rem auto 0 auto;
   padding: 2rem;
 
-  .message-name {
-    font-size: 22px;
+  .message-person {
+    display: flex;
+    max-width: 700px;
+    justify-content: space-between;
+
+    .title-container {
+      .message-name {
+        font-size: 18px;
+      }
+      .message-email {
+        font-size: 18px;
+      }
+    }
+    .delete-button {
+      margin-bottom: 1rem;
+    }
   }
   .message-text {
     border: 1px solid gray;
     padding: 0.5rem;
     border-radius: $border-radius;
     font-size: 16px;
+    margin-bottom: 4rem;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .message-person {
+    flex-direction: column;
   }
 }

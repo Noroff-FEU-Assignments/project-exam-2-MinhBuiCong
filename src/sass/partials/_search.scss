@@ -6,8 +6,12 @@
   margin: 2rem auto 4rem auto;
   transition: 0.3s;
 
-  .css-1s2u09g-control {
-    width: 700px;
+  .css-6j8wv5-Input {
+    width: 663px;
+  }
+
+  .css-26l3qy-menu {
+    margin-top: 1px;
   }
 }
 
@@ -17,7 +21,11 @@
 
 @media screen and (max-width: 768px) {
   .search-container {
-    max-width: 400px;
+    max-width: 500px;
+
+    .css-6j8wv5-Input {
+      width: 463px;
+    }
   }
 }
 
@@ -27,6 +35,9 @@
 
     .input::placeholder {
       font-size: 16px;
+    }
+    .css-6j8wv5-Input {
+      width: 263px;
     }
   }
 }

@@ -1,6 +1,4 @@
 import React, { useState, useEffect } from "react";
-
-// import components
 import Search from "../search/Search";
 import HotelCard from "../card/HotelCard";
 import { getHotels } from "../../constants/api";
@@ -26,7 +24,7 @@ const Home = () => {
         <>
           <Search onSearch={setHotels} data={hotels} />
           {hotels.map((hotel) => (
-            <HotelCard key={hotel.id} {...hotel.attributes} />
+            <HotelCard id={hotel.id} key={hotel.id} {...hotel.attributes} />
           ))}
         </>
       )}

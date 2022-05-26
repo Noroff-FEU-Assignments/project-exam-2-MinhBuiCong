@@ -15,6 +15,7 @@ function ContactPage() {
     })
       .then()
       .catch((e) => console.error(e));
+    window.location.reload();
   };
   return (
     <main className="contact-container">

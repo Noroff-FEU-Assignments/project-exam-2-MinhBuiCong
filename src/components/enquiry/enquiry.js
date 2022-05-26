@@ -15,7 +15,9 @@ function EnquiryPage() {
     })
       .then()
       .catch((e) => console.error(e));
+    window.location.reload();
   };
+
   return (
     <main className="enquiry-container">
       <h1 className="title">Enquiry page</h1>
