@@ -6,8 +6,6 @@ function HotelDetail() {
   const location = useLocation();
   const { props } = location.state;
 
-  console.log(props);
-
   return (
     <main className="hotel-detail-container">
       <h1 className="title">{props.name}</h1>

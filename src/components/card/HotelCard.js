@@ -10,7 +10,6 @@ import PropTypes from "prop-types";
 function HotelCard(props) {
   const navigate = useNavigate();
   const { name, subtitle, description, id, image } = props;
-
   const imageUrl = image?.data?.attributes?.url;
 
   const handleEnquiry = (e) => {

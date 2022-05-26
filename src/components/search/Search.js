@@ -4,7 +4,6 @@ import Select from "react-select";
 function Search(props) {
   const { onSearch, data } = props;
   const [options, setOptions] = useState(() => data);
-
   const hotelOptions = options.map((hotel) => {
     return { label: hotel.attributes.name, value: hotel.id };
   });

@@ -5,10 +5,8 @@ import { addHotel } from "../../constants/api";
 
 function Establishment() {
   const [selectedFile, setSelectedFile] = useState("");
-
   const handleOnClick = (event) => {
     event.preventDefault();
-
     const data = {
       name: event.target.name.value,
       subtitle: event.target.subtitle.value,
@@ -16,9 +14,7 @@ function Establishment() {
     };
     const formData = new FormData();
     formData.append(`files.image`, selectedFile, selectedFile.id);
-
     formData.append("data", JSON.stringify(data));
-
     addHotel(formData);
   };
 

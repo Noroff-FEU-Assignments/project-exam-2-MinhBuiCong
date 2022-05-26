@@ -38,6 +38,5 @@ function getFromStorage(key) {
   if (!value) {
     return [];
   }
-
   return JSON.parse(value);
 }

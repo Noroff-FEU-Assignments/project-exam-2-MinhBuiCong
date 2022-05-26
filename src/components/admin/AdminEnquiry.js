@@ -9,10 +9,8 @@ const fetchEnquiry = async () => {
 
 function AdminEnquiry() {
   const [enquiry, setEnquiry] = useState([]);
-
   const fetchEnquiry = async () => {
     const res = await getEnquiry();
-
     if (res.data) {
       setEnquiry(res.data);
     }

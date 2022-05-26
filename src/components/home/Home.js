@@ -8,7 +8,6 @@ const Home = () => {
   useEffect(() => {
     const fetchHotels = async () => {
       const result = await getHotels();
-
       setHotels(result.data);
     };
     fetchHotels();
@@ -17,7 +16,6 @@ const Home = () => {
   return (
     <main className="home-container">
       <h1 className="title">Book your hotel</h1>
-
       {hotels.length > 0 && (
         <>
           <Search onSearch={setHotels} data={hotels} />

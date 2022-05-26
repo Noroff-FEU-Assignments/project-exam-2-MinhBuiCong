@@ -9,7 +9,6 @@ const fetchContact = async () => {
 
 function AdminContact() {
   const [contact, setContact] = useState([]);
-
   const fetchContact = async () => {
     const res = await getContact();
 

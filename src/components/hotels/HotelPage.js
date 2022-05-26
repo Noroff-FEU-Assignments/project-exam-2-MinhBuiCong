@@ -9,6 +9,7 @@ import { getHotels } from "../../constants/api";
 
 function HotelPage() {
   const [hotels, setHotels] = useState([]);
+
   useEffect(() => {
     const fetchHotels = async () => {
       const result = await getHotels();
