@@ -48,7 +48,7 @@ function App() {
           }
         />
         <Route path="/hotels" element={<HotelPage />} />
-        <Route path="api/hotel-detail" element={<HotelDetail />} />
+        <Route path="/hotel-detail/:id" element={<HotelDetail />} />
         <Route
           path="/admin/establishment"
           element={

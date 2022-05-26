@@ -1,13 +1,15 @@
 .hotel-page-container {
+  display: flex;
+  flex-direction: column;
   max-width: 1140px;
   background-color: $secondary-color;
   margin: 0 auto 4rem auto;
-  min-height: 100vh;
   padding-top: 4rem;
-  padding-bottom: 4rem;
+  min-height: 100vh;
 
   .add-hotels-container {
-    max-width: 700px;
+    max-width: 1140px;
+    width: 700px;
     margin: 0 auto;
     display: block;
     .add-hotels-button {

@@ -5,6 +5,7 @@ import { Link } from "react-router-dom";
 import { getUsername } from "../auth/storage";
 import { useNavigate } from "react-router-dom";
 import { deleteHotel } from "../../constants/api";
+import PropTypes from "prop-types";
 
 function HotelCard(props) {
   const navigate = useNavigate();
@@ -32,7 +33,11 @@ function HotelCard(props) {
           Delete Hotel
         </Button>
       ) : null}
-      <Link className="card-detail-link" to={`api/hotel-detail?id=${id}`}>
+      <Link
+        className="card-detail-link"
+        to={`hotel-detail/${id}`}
+        state={{ props: props }}
+      >
         <Card className="card">
           <Card.Img
             className="card-image"
@@ -52,5 +57,15 @@ function HotelCard(props) {
     </main>
   );
 }
+
+HotelCard.propTypes = {
+  props: PropTypes.shape({
+    name: PropTypes.string,
+    id: PropTypes.string,
+    subtitle: PropTypes.string,
+    description: PropTypes.string,
+  }),
+  imageUrl: PropTypes.string,
+};
 
 export default HotelCard;

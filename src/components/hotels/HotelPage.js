@@ -34,7 +34,7 @@ function HotelPage() {
       ) : null}
       {hotels.length > 0 &&
         hotels.map((hotel) => (
-          <HotelCard key={hotel.id} {...hotel.attributes} />
+          <HotelCard id={hotel.id} key={hotel.id} {...hotel.attributes} />
         ))}
     </main>
   );
