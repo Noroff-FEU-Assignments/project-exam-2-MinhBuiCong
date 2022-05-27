@@ -19,7 +19,7 @@ function HotelCard(props) {
   };
   const handleDelete = (id) => {
     deleteHotel(id);
-    navigate("/");
+    window.location.reload();
   };
 
   return (
