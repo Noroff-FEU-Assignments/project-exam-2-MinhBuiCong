@@ -105,3 +105,30 @@
     flex-direction: column;
   }
 }
+
+//submit form
+
+.form-submit-container {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+
+  .form-submit-title {
+    margin-bottom: 2rem;
+  }
+  .link-submit {
+    .home-page-button {
+      background-color: $cta-color;
+      border: none;
+      font-size: 16px;
+      transition: 0.3s;
+      color: white;
+      padding: 0.5rem;
+      text-decoration: none;
+      margin-right: 2rem;
+    }
+    .home-page-button:hover {
+      opacity: 0.8;
+    }
+  }
+}
