@@ -5,18 +5,22 @@
   font-family: $font-heading;
   margin: 2rem auto 4rem auto;
   transition: 0.3s;
-
-  .css-6j8wv5-Input {
-    width: 663px;
-  }
-
-  .css-26l3qy-menu {
-    margin-top: 1px;
-  }
 }
 
 .search-container:hover {
   box-shadow: $box-shadow;
+}
+.css-b62m3t-container {
+  .css-1pahdxg-control {
+    width: 100%;
+  }
+  .css-1s2u09g-control {
+    width: 100%;
+  }
+}
+
+.css-26l3qy-menu {
+  margin-top: 1px;
 }
 
 @media screen and (max-width: 768px) {

@@ -8,6 +8,7 @@ import { addHotel } from "../../constants/api";
 function Establishment() {
   const [selectedFile, setSelectedFile] = useState("");
   const [submitted, setsubmitted] = useState(false);
+  const [isLoading, setIsLoading] = useState(false);
 
   const handleOnClick = (event) => {
     event.preventDefault();
@@ -19,8 +20,11 @@ function Establishment() {
     const formData = new FormData();
     formData.append(`files.image`, selectedFile, selectedFile.id);
     formData.append("data", JSON.stringify(data));
-    addHotel(formData);
-    setsubmitted(true);
+    setIsLoading(true);
+    addHotel(formData).then(() => {
+      setIsLoading(false);
+      setsubmitted(true);
+    });
   };
 
   return (
@@ -28,7 +32,8 @@ function Establishment() {
       <h1 className="title">Establishment Holidaze - Admin</h1>
 
       <Form className="form-container" onSubmit={handleOnClick}>
-        {!submitted ? (
+        {isLoading && <div className="loader"></div>}
+        {!submitted && !isLoading && (
           <>
             <Form.Group className="group-input" controlId="hotelName">
               <Form.Label className="label">Hotel name</Form.Label>
@@ -74,7 +79,9 @@ function Establishment() {
               Submit
             </Button>
           </>
-        ) : (
+        )}
+
+        {submitted && !isLoading && (
           <div className="form-submit-container">
             <h2 className="form-submit-title">Created new establishment</h2>
             <Link className="link-submit" to="/">
