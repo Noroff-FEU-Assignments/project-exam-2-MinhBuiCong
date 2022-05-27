@@ -21,6 +21,8 @@ function Search(props) {
         className="search-container"
         options={hotelOptions}
         onChange={onChange}
+        placeholder="Search here"
+        style={{ width: 700 }}
       />
     </main>
   );
