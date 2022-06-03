@@ -2,7 +2,7 @@ Holdaze Booking Website
 
 Final project exam at Noroff (Front end development 2022)
 
-- UX Prototype: https://xd.adobe.com/view/905c2292-7a04-40c4- a87a-39408022a1f7-c50f/
+- UX Prototype: https://xd.adobe.com/view/905c2292-7a04-40c4-a87a-39408022a1f7-c50f/
 - Live Version of Site deployed to: https://minh-cong-bui-project-exam-last.netlify.app/
 
 Dev Setup
