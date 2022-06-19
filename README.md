@@ -1,4 +1,4 @@
-Holdaze Booking Website
+Holidaze Booking Website
 
 Final project exam at Noroff (Front end development 2022)
 
